@@ -1,0 +1,14 @@
+#ignore editor settings
+.vscode
+.vs
+
+#ignore virtual env
+venv
+env
+
+#ignore env vars
+.env
+
+#ignore python cache
+__pycache__
+.ipynb_checkpoints

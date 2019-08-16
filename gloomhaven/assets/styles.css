@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One');
+
+html,
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  /* background-color: #cccccc; */
+  height: 100%;
+  margin: 0px;
+}
+
+body,
+#react-entry-point {
+  height: 100%
+}
+
+body,
+#react-entry-point,
+#_dash-global-error-container {
+  height: 100%
+}
+
+body,
+#react-entry-point,
+#_dash-global-error-container {
+  height: 100%
+}
+
+body,
+#react-entry-point,
+#_dash-global-error-container,
+div {
+  height: 99%;
+}

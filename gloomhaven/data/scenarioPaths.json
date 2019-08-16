@@ -1,0 +1,203 @@
+[{
+    "id": 1,
+    "title": "Black Barrow",
+    "party_achievements": ["First Steps"],
+    "new_locations": [2]
+  },
+  {
+    "id": 2,
+    "title": "Barrow Lair",
+    "requirements": ["First Steps"],
+    "new_locations": [3, 4]
+  },
+  {
+    "id": 3,
+    "title": "Inox Encampment",
+    "anti_requirements": ["The Merchant Flees"],
+    "party_achievements": "Jekserah's Plans",
+    "new_locations": [8, 9]
+  },
+  {
+    "id": 4,
+    "title": "Crypt of the Damned",
+    "new_locations": [5, 6]
+  },
+  {
+    "id": 5,
+    "title": "Ruinous Crypt",
+    "new_locations": [10, 14, 19]
+  },
+  {
+    "id": 6,
+    "title": "Decaying Crypt",
+    "party_achievements": ["Jekserah's Plans", "Dark Bounty"],
+    "new_locations": [8]
+  },
+  {
+    "id": 7,
+    "title": "Vibrant Grotto",
+    "requirements": ["The Power of Enhancement", "The Merchant Flees"],
+    "new_locations": [20]
+  },
+  {
+    "id": 8,
+    "title": "Decaying Crypt",
+    "requirements": ["Jekserah's Plans"],
+    "anti_requirements": ["The Dead Invade"],
+    "global_achievements": ["The Merchant Flees"],
+    "new_locations": [7, 13, 14]
+  },
+  {
+    "id": 9,
+    "title": "Diamond Mine",
+    "anti_requirements": ["The Merchant Flees"],
+    "global_achievements": ["The Dead Invade"],
+    "new_locations": [11, 12]
+  },
+  {
+    "id": 10,
+    "title": "Plane of Elemental Power",
+    "anti_requirements": ["The Rift Neutralized"],
+    "party_achievements": ["A Demon's Errand"],
+    "new_locations": [21, 22]
+  },
+  {
+    "id": 11,
+    "title": "Gloomhaven Square A",
+    "anti_requirements": ["End of the Invasion"],
+    "global_achievements": ["City Rule: Economic", "End of the Invasion"],
+    "new_locations": [16, 18]
+  },
+  {
+    "id": 12,
+    "title": "Gloomhaven Square B",
+    "anti_requirements": ["End of the Invasion"],
+    "global_achievements": ["End of the Invasion"],
+    "new_locations": [16, 18, 28]
+  },
+  {
+    "id": 13,
+    "title": "Temple of the Seer",
+    "global_achievements": ["End of the Invasion"],
+    "new_locations": [15, 17, 20]
+  },
+  {
+    "id": 14,
+    "title": "Frozen Hollow",
+    "global_achievements": ["The Power of Enhancement"],
+    "new_locations": []
+  },
+  {
+    "id": 15,
+    "title": "Shrine of Strength",
+    "new_locations": []
+  },
+  {
+    "id": 16,
+    "title": "Mountain Pass",
+    "new_locations": [24, 25]
+  },
+  {
+    "id": 17,
+    "title": "Lost Island",
+    "new_locations": []
+  },
+  {
+    "id": 18,
+    "title": "Abandoned Sewers",
+    "new_locations": [14, 23, 26, 43]
+  },
+  {
+    "id": 19,
+    "title": "Forgotten Crypt",
+    "requirements": ["The Power of Enhancement"],
+    "party_achievements": ["Stonebreaker's Censer"],
+    "new_locations": [27]
+  },
+  {
+    "id": 20,
+    "title": "Necromancer's Sanctum",
+    "requirements": ["The Merchant Flees"],
+    "new_locations": [16, 18, 28]
+  },
+  {
+    "id": 21,
+    "title": "Infernal Throne",
+    "anti_requirements": ["The Rift Neutralized"],
+    "global_achievements": ["The Rift Neutralized"],
+    "conditional_achievements": ["Artifact: Recovered"],
+    "new_locations": []
+  },
+  {
+    "id": 22,
+    "title": "Temple of the Elements",
+    "requirements": ["A Demon's Errand"],
+    "alt_requirements": ["Following Clues"],
+    "global_achievements": ["Artifact: Recovered"],
+    "new_locations": [31, 35, 36]
+  },
+  {
+    "id": 23,
+    "title": "Deep Ruins",
+    "requirements": ["The Power of Enhancement"],
+    "party_achievements": ["Through the Ruins"],
+    "global_achievements": ["Ancient Technology"],
+    "new_locations": [26]
+  },
+  {
+    "id": 24,
+    "title": "Echo Chamber",
+    "party_achievements": ["The Voice's Command"],
+    "new_locations": [30, 32]
+  },
+  {
+    "id": 25,
+    "title": "Icecrag Ascent",
+    "party_achievements": ["The Drake's Command"],
+    "new_locations": [33, 34]
+  },
+  {
+    "id": 26,
+    "title": "Ancient Cistern",
+    "requirements": ["Water-Breathing"],
+    "alt_requirements": ["Through the Ruins"],
+    "party_achievements": ["Following Clues"],
+    "new_locations": [22]
+  },
+  {
+    "id": 27,
+    "title": "Ruinous Rift",
+    "requirements": ["Stonebreaker's Censor"],
+    "anti_requirements": ["Artifact:Lost"],
+    "global_achievements": ["The Rift Neutralized"],
+    "new_locations": []
+  },
+  {
+    "id": 28,
+    "title": "Outer Ritual Chamber",
+    "requirements": ["Dark Bounty"],
+    "party_achievements": ["An Invitation"],
+    "new_locations": [29]
+  },
+  {
+    "id": 29,
+    "title": "Sanctuary of Gloom",
+    "requirements": ["An Invitation"],
+    "global_achievements": ["The Edge of Darkness"],
+    "new_locations": []
+  },
+  {
+    "id": 30,
+    "title": "Shrine of the Depths",
+    "requirements": ["The Voice's Command"],
+    "party_achievements": ["The Scepter and the Voice"],
+    "new_locations": [42]
+  },
+  {
+    "id": 31,
+    "title": "Plane of Night",
+    "requirements": ["The Power of Enhancement", "Artifact: Recovered"],
+    "global_achievements": ["Artifact: Cleansed"],
+    "new_locations": [37, 38, 39, 43]
+  }
+]
