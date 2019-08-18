@@ -2,9 +2,9 @@ import dash_cytoscape as cyto
 import dash_html_components as html
 
 
-from ..components.cyto_builder import create_cyto_elements_for_scenarios, SCENARIOS
+from ..components.cyto_builder import create_cyto_elements_for_scenarios
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS
 
 CYTO_STYLESHEET = [
     # {

@@ -199,5 +199,398 @@
     "requirements": ["The Power of Enhancement", "Artifact: Recovered"],
     "global_achievements": ["Artifact: Cleansed"],
     "new_locations": [37, 38, 39, 43]
+  },
+  {
+    "id": 32,
+    "title": "Decrepit Wood",
+    "requirements": ["The Voice's Command"],
+    "new_locations": [33, 40]
+  },
+  {
+    "id": 33,
+    "title": "Savvas Armory",
+    "requirements": ["The Voice's Command"],
+    "alt_requirements": ["The Drake's Command"],
+    "party_achievements": ["The Voice's Treasure", "The Drake's Treasure"],
+    "new_locations": []
+  },
+  {
+    "id": 34,
+    "title": "Scorched Summit",
+    "requirements": ["The Drake's Command"],
+    "anti_requirements": ["The Drake Aided"],
+    "lost_achievements": ["The Drake's Command"],
+    "global_achievements": ["The Drake Slain"],
+    "new_locations": []
+  },
+  {
+    "id": 35,
+    "title": "Gloomhaven Battlements A",
+    "requirements": ["A Demon's Errand"],
+    "anti_requirements": ["The Rift Neutralized"],
+    "lost_achievements": ["A Demon's Errand"],
+    "global_achievements": ["City Rule: Demonic", "Artifact: Lost"],
+    "new_locations": [45]
+  },
+  {
+    "id": 36,
+    "title": "Gloomhaven Battlements B",
+    "requirements": ["A Demon's Errand"],
+    "anti_requirements": ["The Rift Neutralized"],
+    "lost_achievements": ["A Demon's Errand"],
+    "global_achievements": ["The Rift Neutralized"],
+    "new_locations": []
+  },
+  {
+    "id": 37,
+    "title": "Doom Trench",
+    "requirements": ["Water-Breathing"],
+    "party_achievements": ["Through the Trench"],
+    "new_locations": [47]
+  },
+  {
+    "id": 38,
+    "title": "Slave Pens",
+    "party_achievements": ["Redthorn's Aid"],
+    "new_locations": [44, 48]
+  },
+  {
+    "id": 39,
+    "title": "Treacherous Divide",
+    "party_achievements": ["Across the Divide"],
+    "new_locations": [15, 46]
+  },
+  {
+    "id": 40,
+    "title": "Ancient Defense Network",
+    "requirements": ["The Voice's Command", "The Voice's Treasure"],
+    "global_achievements": ["Ancient Technology"],
+    "new_locations": [41]
+  },
+  {
+    "id": 41,
+    "title": "Timeworn Tomb",
+    "requirements": ["The Voice's Command"],
+    "global_achievements": ["The Voice Freed"],
+    "new_locations": []
+  },
+  {
+    "id": 42,
+    "title": "Realm of the Voice",
+    "requirements": ["The Scepter and the Voice"],
+    "anti_requirements": ["The Voice Freed"],
+    "lost_achievements": ["The Voice's Command"],
+    "global_achievements": ["The Voice Silenced"],
+    "new_locations": []
+  },
+  {
+    "id": 43,
+    "title": "Drake Nest",
+    "requirements": ["The Power of Enhancement"],
+    "global_achievements": ["Water-Breathing"],
+    "new_locations": []
+  },
+  {
+    "id": 44,
+    "title": "Tribal Assault",
+    "requirements": ["Rethorn's Aid"],
+    "new_locations": []
+  },
+  {
+    "id": 45,
+    "title": "Rebel Swamp",
+    "requirements": ["City Rule: Demonic"],
+    "new_locations": [49, 50]
+  },
+  {
+    "id": 46,
+    "title": "Nightmare Peak",
+    "requirements": ["Across the Divide"],
+    "global_achievements": ["End of Corruption"],
+    "new_locations": [51]
+  },
+  {
+    "id": 47,
+    "title": "Lair of the Unseeing Eye",
+    "requirements": ["Through the Trench"],
+    "global_achievements": ["End of Corruption"],
+    "new_locations": [51]
+  },
+  {
+    "id": 48,
+    "title": "Shadow Weald",
+    "requirements": ["Redthorn's Aid"],
+    "global_achievements": ["End of Corruption"],
+    "new_locations": [51]
+  },
+  {
+    "id": 49,
+    "title": "Rebel's Stand",
+    "requirements": ["City Rule: Demonic"],
+    "global_achievements": ["Annihilation of Order"],
+    "new_locations": []
+  },
+  {
+    "id": 50,
+    "title": "Ghost Fortress",
+    "requirements": ["City Rule: Demonic"],
+    "anti_requirements": ["Annihilation of Order"],
+    "global_achievements": ["City Rule: Militaristic"],
+    "new_locations": []
+  },
+  {
+    "id": 51,
+    "title": "The Void",
+    "requirements": ["End of Corruption", "End of Corruption", "End of Corruption"],
+    "global_achievements": ["End of Gloom"],
+    "new_locations": []
+  },
+  {
+    "id": 52,
+    "title": "The Noxious Cellar",
+    "personal_requirements": ["Seaker of Xorn"],
+    "new_locations": [53]
+  },
+  {
+    "id": 53,
+    "title": "Crypt Basement",
+    "personal_requirements": ["Seaker of Xorn"],
+    "new_locations": [54]
+  },
+  {
+    "id": 54,
+    "title": "Palace of Ice",
+    "personal_requirements": ["Seaker of Xorn"],
+    "new_locations": []
+  },
+  {
+    "id": 55,
+    "title": "Foggy Thicket",
+    "personal_requirements": ["Take Back the Trees"],
+    "new_locations": [56]
+  },
+  {
+    "id": 56,
+    "title": "Bandit's Wood",
+    "personal_requirements": ["Take Back the Trees"],
+    "new_locations": []
+  },
+  {
+    "id": 57,
+    "title": "Investigation",
+    "personal_requirements": ["Vengeance"],
+    "new_locations": [58]
+  },
+  {
+    "id": 58,
+    "title": "Bloody Shack",
+    "personal_requirements": ["Vengeance"],
+    "new_locations": []
+  },
+  {
+    "id": 59,
+    "title": "Forgotten Grove",
+    "personal_requirements": ["Finding the Cure"],
+    "new_locations": [60]
+  },
+  {
+    "id": 60,
+    "title": "Alchemy Lab",
+    "personal_requirements": ["Finding the Cure"],
+    "new_locations": []
+  },
+  {
+    "id": 61,
+    "title": "Fading Lighthouse",
+    "personal_requirements": ["The Fall of Man"],
+    "new_locations": [62]
+  },
+  {
+    "id": 62,
+    "title": "Pit of Souls",
+    "personal_requirements": ["The Fall of Man"],
+    "new_locations": []
+  },
+  {
+    "id": 63,
+    "title": "Magma Pit",
+    "new_locations": []
+  },
+  {
+    "id": 64,
+    "title": "Underwater Lagoon",
+    "new_locations": []
+  },
+  {
+    "id": 65,
+    "title": "Sulfur Mine",
+    "global_achievements": ["Ancient Technology"],
+    "new_locations": []
+  },
+  {
+    "id": 66,
+    "title": "Clockwork Cove",
+    "global_achievements": ["Ancient Technology"],
+    "new_locations": []
+  },
+  {
+    "id": 67,
+    "title": "Arcane Library",
+    "global_achievements": ["Ancient Technology"],
+    "new_locations": []
+  },
+  {
+    "id": 68,
+    "title": "Toxic Moor",
+    "new_locations": []
+  },
+  {
+    "id": 69,
+    "title": "Well of the Unfortunate",
+    "new_locations": []
+  },
+  {
+    "id": 70,
+    "title": "Chained Isle",
+    "new_locations": []
+  },
+  {
+    "id": 71,
+    "title": "Windswept Highlands",
+    "new_locations": []
+  },
+  {
+    "id": 72,
+    "title": "Oozing Grove",
+    "new_locations": []
+  },
+  {
+    "id": 73,
+    "title": "Rockslide Ridge",
+    "new_locations": []
+  },
+  {
+    "id": 74,
+    "title": "Merchant Ship",
+    "requirements": ["High Sea Escort"],
+    "new_locations": []
+  },
+  {
+    "id": 75,
+    "title": "Overgrown Graveyard",
+    "requirements": ["Grave Job"],
+    "new_locations": []
+  },
+  {
+    "id": 76,
+    "title": "Harrower Hive",
+    "requirements": ["Bravery"],
+    "new_locations": []
+  },
+  {
+    "id": 77,
+    "title": "Vault of Secrets",
+    "new_locations": []
+  },
+  {
+    "id": 78,
+    "title": "Sacrifice Pit",
+    "new_locations": []
+  },
+  {
+    "id": 79,
+    "title": "Lost Temple",
+    "requirements": ["Fish's Aid"],
+    "new_locations": []
+  },
+  {
+    "id": 80,
+    "title": "Vigil Keep",
+    "new_locations": []
+  },
+  {
+    "id": 81,
+    "title": "Temple of the Eclipse",
+    "new_locations": []
+  },
+  {
+    "id": 82,
+    "title": "Burning Mountain",
+    "new_locations": []
+  },
+  {
+    "id": 83,
+    "title": "Shadows Within",
+    "requirements": ["Bad Business"],
+    "new_locations": []
+  },
+  {
+    "id": 84,
+    "title": "Crystalline Cave",
+    "requirements": ["Tremors"],
+    "new_locations": []
+  },
+  {
+    "id": 85,
+    "title": "Sun Temple",
+    "new_locations": []
+  },
+  {
+    "id": 86,
+    "title": "Harried Village",
+    "party_achievements": ["The Poison's Source"],
+    "new_locations": [87]
+  },
+  {
+    "id": 87,
+    "title": "Corrupted Cove",
+    "requirements": ["The Poison's Source"],
+    "new_locations": []
+  },
+  {
+    "id": 88,
+    "title": "Plane of Water",
+    "requirements": ["Water-Breathing", "Water Staff"],
+    "new_locations": []
+  },
+  {
+    "id": 89,
+    "title": "Syndicate Hideout",
+    "requirements": ["Sin-Ra"],
+    "new_locations": []
+  },
+  {
+    "id": 90,
+    "title": "Demonic Rift",
+    "new_locations": []
+  },
+  {
+    "id": 91,
+    "title": "Wild Melee",
+    "new_locations": []
+  },
+  {
+    "id": 92,
+    "title": "Back Alley Brawl",
+    "requirements": ["Debt Collection"],
+    "new_locations": []
+  },
+  {
+    "id": 93,
+    "title": "Sunken Vessel",
+    "requirements": ["A Map to Treasure"],
+    "new_locations": []
+  },
+  {
+    "id": 94,
+    "title": "Vermling Nest",
+    "party_achievements": ["Through the Nest"],
+    "new_locations": [95]
+  },
+  {
+    "id": 95,
+    "title": "Payment Due",
+    "requirements": ["Through the Nest"],
+    "new_locations": []
   }
 ]
