@@ -1,0 +1,6 @@
+version: "3"
+
+services:
+  dash:
+    image: cjadkins/gloomhaven-campaign-manager
+    restart: always
