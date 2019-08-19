@@ -3,7 +3,7 @@ from ..models.scenario import Scenario
 
 def create_scenario_cyto_node(scenario: Scenario):
     return {
-        'data': {'id': scenario.id, 'label': scenario.title},
+        'data': {'id': scenario.id, 'label': scenario.title, 'parent': scenario.scenario_type},
         'classes': 'triangle'
     }
 

@@ -1,3 +1,5 @@
+import json
+
 from ..models.scenario import Scenario
 
 from ..consts import SCENARIOS
@@ -19,6 +21,9 @@ class Campaign():
             s for s in SCENARIOS if s.id == id)
 
     def complete_scenario(self, scenario_id: int):
+
+        if scenario_id in self.completed_scenarios or not self.scenario_requirements_met(scenario_id):
+            return
 
         self.completed_scenarios.append(scenario_id)
         self.attempted_scenarios.append(scenario_id)
@@ -72,3 +77,46 @@ class Campaign():
                 requirements_met = False
 
         return requirements_met
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+
+    def to_cyto_graph(self):
+        return self.create_cyto_elements_for_scenarios()
+
+    def create_scenario_cyto_node(self, scenario: Scenario, className='blue'):
+        return {
+            'data': {'id': scenario.id, 'label': scenario.title, 'parent': scenario.scenario_type, 'type': className},
+            'classes': className
+        }
+
+    def create_cyto_edge(self, p1: int, p2: int):
+        return {'data': {'source': p1, 'target': p2}, 'style': {
+            'mid-source-arrow-fill': 'filled', 'mid-target-arrow-shape': 'vee'},
+            'selectable': False}
+
+    def create_cyto_elements_for_scenarios(self):
+        possible_s = [
+            s for s in self.available_scenarios if self.scenario_requirements_met(s)]
+        impossible_s = [
+            s for s in self.available_scenarios if not self.scenario_requirements_met(s)]
+
+        s_todo = [self.get_scenario(s) for s in possible_s]
+        nodes_todo = [self.create_scenario_cyto_node(
+            s, 'blue') for s in s_todo]
+        edges_todo = [self.create_cyto_edge(s.id, n)
+                      for s in s_todo for n in s.new_locations]
+
+        s_done = [self.get_scenario(s) for s in self.completed_scenarios]
+        nodes_done = [self.create_scenario_cyto_node(
+            s, 'green') for s in s_done]
+        edges_done = [self.create_cyto_edge(s.id, n)
+                      for s in s_done for n in s.new_locations]
+
+        s_blocked = [self.get_scenario(s) for s in impossible_s]
+        nodes_blocked = [self.create_scenario_cyto_node(
+            s, 'red') for s in s_blocked]
+        edges_blocked = [self.create_cyto_edge(s.id, n)
+                         for s in s_blocked for n in s.new_locations]
+
+        return nodes_todo + edges_todo + nodes_done + edges_done + nodes_blocked + edges_blocked

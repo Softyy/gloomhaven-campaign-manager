@@ -349,248 +349,292 @@
     "id": 52,
     "title": "The Noxious Cellar",
     "personal_requirements": ["Seaker of Xorn"],
+    "scenario_type": "personal",
     "new_locations": [53]
   },
   {
     "id": 53,
     "title": "Crypt Basement",
     "personal_requirements": ["Seaker of Xorn"],
+    "scenario_type": "personal",
     "new_locations": [54]
   },
   {
     "id": 54,
     "title": "Palace of Ice",
     "personal_requirements": ["Seaker of Xorn"],
+    "scenario_type": "personal",
     "new_locations": []
   },
   {
     "id": 55,
     "title": "Foggy Thicket",
     "personal_requirements": ["Take Back the Trees"],
+    "scenario_type": "personal",
     "new_locations": [56]
   },
   {
     "id": 56,
     "title": "Bandit's Wood",
     "personal_requirements": ["Take Back the Trees"],
+    "scenario_type": "personal",
     "new_locations": []
   },
   {
     "id": 57,
     "title": "Investigation",
     "personal_requirements": ["Vengeance"],
+    "scenario_type": "personal",
     "new_locations": [58]
   },
   {
     "id": 58,
     "title": "Bloody Shack",
     "personal_requirements": ["Vengeance"],
+    "scenario_type": "personal",
     "new_locations": []
   },
   {
     "id": 59,
     "title": "Forgotten Grove",
     "personal_requirements": ["Finding the Cure"],
+    "scenario_type": "personal",
     "new_locations": [60]
   },
   {
     "id": 60,
     "title": "Alchemy Lab",
     "personal_requirements": ["Finding the Cure"],
+    "scenario_type": "personal",
     "new_locations": []
   },
   {
     "id": 61,
     "title": "Fading Lighthouse",
     "personal_requirements": ["The Fall of Man"],
+    "scenario_type": "personal",
     "new_locations": [62]
   },
   {
     "id": 62,
     "title": "Pit of Souls",
     "personal_requirements": ["The Fall of Man"],
+    "scenario_type": "personal",
     "new_locations": []
   },
   {
     "id": 63,
     "title": "Magma Pit",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 64,
     "title": "Underwater Lagoon",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 65,
     "title": "Sulfur Mine",
     "global_achievements": ["Ancient Technology"],
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 66,
     "title": "Clockwork Cove",
     "global_achievements": ["Ancient Technology"],
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 67,
     "title": "Arcane Library",
     "global_achievements": ["Ancient Technology"],
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 68,
     "title": "Toxic Moor",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 69,
     "title": "Well of the Unfortunate",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 70,
     "title": "Chained Isle",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 71,
     "title": "Windswept Highlands",
+    "scenario_type": "random",
     "new_locations": []
   },
   {
     "id": 72,
     "title": "Oozing Grove",
+    "scenario_type": "sealed",
     "new_locations": []
   },
   {
     "id": 73,
     "title": "Rockslide Ridge",
+    "scenario_type": "sealed",
     "new_locations": []
   },
   {
     "id": 74,
     "title": "Merchant Ship",
     "requirements": ["High Sea Escort"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 75,
     "title": "Overgrown Graveyard",
     "requirements": ["Grave Job"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 76,
     "title": "Harrower Hive",
     "requirements": ["Bravery"],
+    "scenario_type": "sealed",
     "new_locations": []
   },
   {
     "id": 77,
     "title": "Vault of Secrets",
+    "scenario_type": "sealed",
     "new_locations": []
   },
   {
     "id": 78,
     "title": "Sacrifice Pit",
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 79,
     "title": "Lost Temple",
     "requirements": ["Fish's Aid"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 80,
     "title": "Vigil Keep",
+    "scenario_type": "road",
     "new_locations": []
   },
   {
     "id": 81,
     "title": "Temple of the Eclipse",
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 82,
     "title": "Burning Mountain",
+    "scenario_type": "road",
     "new_locations": []
   },
   {
     "id": 83,
     "title": "Shadows Within",
     "requirements": ["Bad Business"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 84,
     "title": "Crystalline Cave",
     "requirements": ["Tremors"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 85,
     "title": "Sun Temple",
+    "scenario_type": "road",
     "new_locations": []
   },
   {
     "id": 86,
     "title": "Harried Village",
     "party_achievements": ["The Poison's Source"],
+    "scenario_type": "city",
     "new_locations": [87]
   },
   {
     "id": 87,
     "title": "Corrupted Cove",
     "requirements": ["The Poison's Source"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 88,
     "title": "Plane of Water",
     "requirements": ["Water-Breathing", "Water Staff"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 89,
     "title": "Syndicate Hideout",
     "requirements": ["Sin-Ra"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 90,
     "title": "Demonic Rift",
+    "scenario_type": "road",
     "new_locations": []
   },
   {
     "id": 91,
     "title": "Wild Melee",
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 92,
     "title": "Back Alley Brawl",
     "requirements": ["Debt Collection"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 93,
     "title": "Sunken Vessel",
     "requirements": ["A Map to Treasure"],
+    "scenario_type": "city",
     "new_locations": []
   },
   {
     "id": 94,
     "title": "Vermling Nest",
     "party_achievements": ["Through the Nest"],
+    "scenario_type": "city",
     "new_locations": [95]
   },
   {
     "id": 95,
     "title": "Payment Due",
     "requirements": ["Through the Nest"],
+    "scenario_type": "city",
     "new_locations": []
   }
 ]
