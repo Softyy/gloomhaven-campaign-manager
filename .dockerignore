@@ -1,0 +1,19 @@
+#ignore editor configs
+.vscode
+.vs
+
+#ignore venv
+venv
+
+#ignore python cache
+__pycache__
+
+#ignore non code
+LICENSE
+README.md
+run.py
+tests
+test.py
+
+#ignore heroku 
+heroku.yml
