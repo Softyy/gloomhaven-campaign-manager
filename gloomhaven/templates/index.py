@@ -2,7 +2,7 @@ import dash_cytoscape as cyto
 import dash_html_components as html
 import dash_core_components as dcc
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID
 
 from .banners import render as banners
 
@@ -17,7 +17,7 @@ CYTO_STYLESHEET = [
     {
         'selector': '.green',
         'style': {
-            'content': 'data(label)',
+            # 'content': 'data(label)',
             'background-color': 'green',
         }
     },
@@ -28,6 +28,10 @@ CYTO_STYLESHEET = [
             'background-color': 'red',
         }
     },
+    {
+        'selector': '.dummy',
+        'style': {}
+    }
     # {
     #     'selector': '.triangle',
     #     'style': {
@@ -50,14 +54,15 @@ def render():
         banners(),
         cyto.Cytoscape(
             id=CYTO_GRAPH_ID,
-            layout={'name': 'cose', 'roots': '[id = "1"]'},
+            layout={'name': 'cose', 'roots': '[id = "1"]', 'animate': 'True'},
             style={'width': '100%', 'height': '600px'},
             elements=[],
-            # elements=create_cyto_elements_for_scenarios(
-            #     SCENARIOS[:50]) + SCENARIO_NODE_PARENTS,
             minZoom=0.5,
             maxZoom=2,
+
             stylesheet=CYTO_STYLESHEET
         ),
-        html.Div(id=DUMMY_ID)
+        html.Button(id=CLEAR_DATA_ID, children="CLEAR DATA"),
+        html.A(id=DOWNLOAD_DATA_ID, children="DOWNLOAD DATA", download="gloomhaven-campaign-manager-data.json",
+               href="", target="_blank"),
     ])

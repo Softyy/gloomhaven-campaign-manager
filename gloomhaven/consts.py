@@ -8,6 +8,8 @@ CYTO_GRAPH_ID = 'scenario-paths'
 DUMMY_ID = 'dummy'
 STORE_ID = 'gloomhaven-campaign-manager-storage'
 BANNERS_ID = 'banners'
+CLEAR_DATA_ID = 'clear-data'
+DOWNLOAD_DATA_ID = 'download-data'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
