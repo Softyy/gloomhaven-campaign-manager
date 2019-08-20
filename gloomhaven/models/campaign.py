@@ -1,5 +1,3 @@
-import json
-
 from dash_html_components import Img
 
 from ..models.scenario import Scenario
@@ -86,8 +84,8 @@ class Campaign():
 
         return requirements_met
 
-    def to_json(self):
-        return json.dumps(self.__dict__)
+    def to_dict(self):
+        return self.__dict__
 
     def to_cyto_graph(self):
         return self.create_cyto_elements_for_scenarios()
@@ -112,8 +110,8 @@ class Campaign():
         s_todo = [self.get_scenario(s) for s in possible_s]
         nodes_todo = [self.create_scenario_cyto_node(
             s, 'blue') for s in s_todo]
-        edges_todo = [self.create_cyto_edge(s.id, n)
-                      for s in s_todo for n in s.new_locations]
+        # edges_todo = [self.create_cyto_edge(s.id, n)
+        #               for s in s_todo for n in s.new_locations]
 
         s_done = [self.get_scenario(s) for s in self.completed_scenarios]
         nodes_done = [self.create_scenario_cyto_node(
@@ -124,10 +122,10 @@ class Campaign():
         s_blocked = [self.get_scenario(s) for s in impossible_s]
         nodes_blocked = [self.create_scenario_cyto_node(
             s, 'red') for s in s_blocked]
-        edges_blocked = [self.create_cyto_edge(s.id, n)
-                         for s in s_blocked for n in s.new_locations]
+        # edges_blocked = [self.create_cyto_edge(s.id, n)
+        #                  for s in s_blocked for n in s.new_locations]
 
-        return nodes_todo + edges_todo + nodes_done + edges_done + nodes_blocked + edges_blocked
+        return nodes_todo + nodes_done + edges_done + nodes_blocked
 
     def create_global_banner_imgs(self):
         global_achievements = [

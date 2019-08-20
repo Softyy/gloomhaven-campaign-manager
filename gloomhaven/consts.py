@@ -6,7 +6,7 @@ from .models.achievement import GlobalAchievement
 
 CYTO_GRAPH_ID = 'scenario-paths'
 DUMMY_ID = 'dummy'
-STORE_ID = 'local-storage'
+STORE_ID = 'gloomhaven-campaign-manager-storage'
 BANNERS_ID = 'banners'
 
 MAIN_QUEST_NODE = {
