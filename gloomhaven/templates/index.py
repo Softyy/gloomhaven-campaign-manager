@@ -2,9 +2,6 @@ import dash_cytoscape as cyto
 import dash_html_components as html
 import dash_core_components as dcc
 
-
-from ..components.cyto_builder import create_cyto_elements_for_scenarios
-
 from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID
 
 from .banners import render as banners
