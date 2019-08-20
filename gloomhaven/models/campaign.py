@@ -10,7 +10,7 @@ from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
 class Campaign():
 
-    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = [], party_achievements: [str] = []):
+    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = []):
         self.available_scenarios = available_scenarios
         self.completed_scenarios = completed_scenarios
         self.attempted_scenarios = attempted_scenarios
@@ -132,4 +132,4 @@ class Campaign():
     def create_global_banner_imgs(self):
         global_achievements = [
             self.get_global_achievement(t) for t in self.global_achievements]
-        return [Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}') for ga in global_achievements]
+        return [Img(style={"display": "table-caption", "width": "240px"})]+[Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}', className="rotate90") for ga in global_achievements]
