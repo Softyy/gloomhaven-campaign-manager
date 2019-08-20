@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "title": "Black Barrow",
     "party_achievements": ["First Steps"],
@@ -14,7 +15,7 @@
     "id": 3,
     "title": "Inox Encampment",
     "anti_requirements": ["The Merchant Flees"],
-    "party_achievements": "Jekserah's Plans",
+    "party_achievements": ["Jekserah's Plans"],
     "new_locations": [8, 9]
   },
   {
@@ -41,7 +42,7 @@
   },
   {
     "id": 8,
-    "title": "Decaying Crypt",
+    "title": "Gloomhaven Warehouse",
     "requirements": ["Jekserah's Plans"],
     "anti_requirements": ["The Dead Invade"],
     "global_achievements": ["The Merchant Flees"],
@@ -84,13 +85,11 @@
   {
     "id": 14,
     "title": "Frozen Hollow",
-    "global_achievements": ["The Power of Enhancement"],
-    "new_locations": []
+    "global_achievements": ["The Power of Enhancement"]
   },
   {
     "id": 15,
-    "title": "Shrine of Strength",
-    "new_locations": []
+    "title": "Shrine of Strength"
   },
   {
     "id": 16,
@@ -99,8 +98,7 @@
   },
   {
     "id": 17,
-    "title": "Lost Island",
-    "new_locations": []
+    "title": "Lost Island"
   },
   {
     "id": 18,
@@ -125,8 +123,7 @@
     "title": "Infernal Throne",
     "anti_requirements": ["The Rift Neutralized"],
     "global_achievements": ["The Rift Neutralized"],
-    "conditional_achievements": ["Artifact: Recovered"],
-    "new_locations": []
+    "conditional_achievements": ["Artifact: Recovered"]
   },
   {
     "id": 22,
@@ -169,8 +166,7 @@
     "title": "Ruinous Rift",
     "requirements": ["Stonebreaker's Censor"],
     "anti_requirements": ["Artifact:Lost"],
-    "global_achievements": ["The Rift Neutralized"],
-    "new_locations": []
+    "global_achievements": ["The Rift Neutralized"]
   },
   {
     "id": 28,
@@ -183,8 +179,7 @@
     "id": 29,
     "title": "Sanctuary of Gloom",
     "requirements": ["An Invitation"],
-    "global_achievements": ["The Edge of Darkness"],
-    "new_locations": []
+    "global_achievements": ["The Edge of Darkness"]
   },
   {
     "id": 30,
@@ -211,8 +206,7 @@
     "title": "Savvas Armory",
     "requirements": ["The Voice's Command"],
     "alt_requirements": ["The Drake's Command"],
-    "party_achievements": ["The Voice's Treasure", "The Drake's Treasure"],
-    "new_locations": []
+    "party_achievements": ["The Voice's Treasure", "The Drake's Treasure"]
   },
   {
     "id": 34,
@@ -220,8 +214,7 @@
     "requirements": ["The Drake's Command"],
     "anti_requirements": ["The Drake Aided"],
     "lost_achievements": ["The Drake's Command"],
-    "global_achievements": ["The Drake Slain"],
-    "new_locations": []
+    "global_achievements": ["The Drake Slain"]
   },
   {
     "id": 35,
@@ -238,8 +231,7 @@
     "requirements": ["A Demon's Errand"],
     "anti_requirements": ["The Rift Neutralized"],
     "lost_achievements": ["A Demon's Errand"],
-    "global_achievements": ["The Rift Neutralized"],
-    "new_locations": []
+    "global_achievements": ["The Rift Neutralized"]
   },
   {
     "id": 37,
@@ -271,8 +263,7 @@
     "id": 41,
     "title": "Timeworn Tomb",
     "requirements": ["The Voice's Command"],
-    "global_achievements": ["The Voice Freed"],
-    "new_locations": []
+    "global_achievements": ["The Voice Freed"]
   },
   {
     "id": 42,
@@ -280,21 +271,18 @@
     "requirements": ["The Scepter and the Voice"],
     "anti_requirements": ["The Voice Freed"],
     "lost_achievements": ["The Voice's Command"],
-    "global_achievements": ["The Voice Silenced"],
-    "new_locations": []
+    "global_achievements": ["The Voice Silenced"]
   },
   {
     "id": 43,
     "title": "Drake Nest",
     "requirements": ["The Power of Enhancement"],
-    "global_achievements": ["Water-Breathing"],
-    "new_locations": []
+    "global_achievements": ["Water-Breathing"]
   },
   {
     "id": 44,
     "title": "Tribal Assault",
-    "requirements": ["Rethorn's Aid"],
-    "new_locations": []
+    "requirements": ["Rethorn's Aid"]
   },
   {
     "id": 45,
@@ -327,23 +315,24 @@
     "id": 49,
     "title": "Rebel's Stand",
     "requirements": ["City Rule: Demonic"],
-    "global_achievements": ["Annihilation of Order"],
-    "new_locations": []
+    "global_achievements": ["Annihilation of Order"]
   },
   {
     "id": 50,
     "title": "Ghost Fortress",
     "requirements": ["City Rule: Demonic"],
     "anti_requirements": ["Annihilation of Order"],
-    "global_achievements": ["City Rule: Militaristic"],
-    "new_locations": []
+    "global_achievements": ["City Rule: Militaristic"]
   },
   {
     "id": 51,
     "title": "The Void",
-    "requirements": ["End of Corruption", "End of Corruption", "End of Corruption"],
-    "global_achievements": ["End of Gloom"],
-    "new_locations": []
+    "requirements": [
+      "End of Corruption",
+      "End of Corruption",
+      "End of Corruption"
+    ],
+    "global_achievements": ["End of Gloom"]
   },
   {
     "id": 52,
@@ -363,8 +352,7 @@
     "id": 54,
     "title": "Palace of Ice",
     "personal_requirements": ["Seaker of Xorn"],
-    "scenario_type": "personal",
-    "new_locations": []
+    "scenario_type": "personal"
   },
   {
     "id": 55,
@@ -377,8 +365,7 @@
     "id": 56,
     "title": "Bandit's Wood",
     "personal_requirements": ["Take Back the Trees"],
-    "scenario_type": "personal",
-    "new_locations": []
+    "scenario_type": "personal"
   },
   {
     "id": 57,
@@ -391,8 +378,7 @@
     "id": 58,
     "title": "Bloody Shack",
     "personal_requirements": ["Vengeance"],
-    "scenario_type": "personal",
-    "new_locations": []
+    "scenario_type": "personal"
   },
   {
     "id": 59,
@@ -405,8 +391,7 @@
     "id": 60,
     "title": "Alchemy Lab",
     "personal_requirements": ["Finding the Cure"],
-    "scenario_type": "personal",
-    "new_locations": []
+    "scenario_type": "personal"
   },
   {
     "id": 61,
@@ -419,155 +404,131 @@
     "id": 62,
     "title": "Pit of Souls",
     "personal_requirements": ["The Fall of Man"],
-    "scenario_type": "personal",
-    "new_locations": []
+    "scenario_type": "personal"
   },
   {
     "id": 63,
     "title": "Magma Pit",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 64,
     "title": "Underwater Lagoon",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 65,
     "title": "Sulfur Mine",
     "global_achievements": ["Ancient Technology"],
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 66,
     "title": "Clockwork Cove",
     "global_achievements": ["Ancient Technology"],
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 67,
     "title": "Arcane Library",
     "global_achievements": ["Ancient Technology"],
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 68,
     "title": "Toxic Moor",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 69,
     "title": "Well of the Unfortunate",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 70,
     "title": "Chained Isle",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 71,
     "title": "Windswept Highlands",
-    "scenario_type": "random",
-    "new_locations": []
+    "scenario_type": "random"
   },
   {
     "id": 72,
     "title": "Oozing Grove",
-    "scenario_type": "sealed",
-    "new_locations": []
+    "scenario_type": "sealed"
   },
   {
     "id": 73,
     "title": "Rockslide Ridge",
-    "scenario_type": "sealed",
-    "new_locations": []
+    "scenario_type": "sealed"
   },
   {
     "id": 74,
     "title": "Merchant Ship",
     "requirements": ["High Sea Escort"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 75,
     "title": "Overgrown Graveyard",
     "requirements": ["Grave Job"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 76,
     "title": "Harrower Hive",
     "requirements": ["Bravery"],
-    "scenario_type": "sealed",
-    "new_locations": []
+    "scenario_type": "sealed"
   },
   {
     "id": 77,
     "title": "Vault of Secrets",
-    "scenario_type": "sealed",
-    "new_locations": []
+    "scenario_type": "sealed"
   },
   {
     "id": 78,
     "title": "Sacrifice Pit",
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 79,
     "title": "Lost Temple",
     "requirements": ["Fish's Aid"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 80,
     "title": "Vigil Keep",
-    "scenario_type": "road",
-    "new_locations": []
+    "scenario_type": "road"
   },
   {
     "id": 81,
     "title": "Temple of the Eclipse",
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 82,
     "title": "Burning Mountain",
-    "scenario_type": "road",
-    "new_locations": []
+    "scenario_type": "road"
   },
   {
     "id": 83,
     "title": "Shadows Within",
     "requirements": ["Bad Business"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 84,
     "title": "Crystalline Cave",
     "requirements": ["Tremors"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 85,
     "title": "Sun Temple",
-    "scenario_type": "road",
-    "new_locations": []
+    "scenario_type": "road"
   },
   {
     "id": 86,
@@ -580,48 +541,41 @@
     "id": 87,
     "title": "Corrupted Cove",
     "requirements": ["The Poison's Source"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 88,
     "title": "Plane of Water",
     "requirements": ["Water-Breathing", "Water Staff"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 89,
     "title": "Syndicate Hideout",
     "requirements": ["Sin-Ra"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 90,
     "title": "Demonic Rift",
-    "scenario_type": "road",
-    "new_locations": []
+    "scenario_type": "road"
   },
   {
     "id": 91,
     "title": "Wild Melee",
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 92,
     "title": "Back Alley Brawl",
     "requirements": ["Debt Collection"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 93,
     "title": "Sunken Vessel",
     "requirements": ["A Map to Treasure"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   },
   {
     "id": 94,
@@ -634,7 +588,6 @@
     "id": 95,
     "title": "Payment Due",
     "requirements": ["Through the Nest"],
-    "scenario_type": "city",
-    "new_locations": []
+    "scenario_type": "city"
   }
 ]
