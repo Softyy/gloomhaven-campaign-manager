@@ -1,11 +1,13 @@
 import os
 import json
 from .models.scenario import Scenario
+from .models.achievement import GlobalAchievement
 
 
 CYTO_GRAPH_ID = 'scenario-paths'
 DUMMY_ID = 'dummy'
 STORE_ID = 'local-storage'
+BANNERS_ID = 'banners'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
@@ -40,8 +42,15 @@ SCENARIO_NODE_PARENTS = [
     # ROAD_QUEST_NODE
 ]
 
+# Game database as consts.
 
 with open(os.path.join(os.getcwd(), "gloomhaven",
                        "data", "scenarioPaths.json")) as data_file:
     json_array = json.load(data_file)
     SCENARIOS = [Scenario(**values) for values in json_array]
+
+with open(os.path.join(os.getcwd(), "gloomhaven",
+                       "data", "globalAchievements.json")) as data_file:
+    json_array = json.load(data_file)
+    GLOBAL_ACHIEVEMENTS = [GlobalAchievement(
+        **values) for values in json_array]

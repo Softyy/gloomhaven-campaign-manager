@@ -7,6 +7,8 @@ from ..components.cyto_builder import create_cyto_elements_for_scenarios
 
 from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID
 
+from .banners import render as banners
+
 CYTO_STYLESHEET = [
     {
         'selector': '.blue',
@@ -48,10 +50,11 @@ CYTO_STYLESHEET = [
 def render():
     return html.Div([
         dcc.Store(id=STORE_ID, storage_type='local'),
+        banners(),
         cyto.Cytoscape(
             id=CYTO_GRAPH_ID,
-            layout={'name': 'breadthfirst', 'roots': '[id = "1"]'},
-            style={'width': '100%', 'height': '100%'},
+            layout={'name': 'cose', 'roots': '[id = "1"]'},
+            style={'width': '100%', 'height': '600px'},
             elements=[],
             # elements=create_cyto_elements_for_scenarios(
             #     SCENARIOS[:50]) + SCENARIO_NODE_PARENTS,

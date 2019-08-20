@@ -1,8 +1,11 @@
 import json
 
-from ..models.scenario import Scenario
+from dash_html_components import Img
 
-from ..consts import SCENARIOS
+from ..models.scenario import Scenario
+from ..models.achievement import GlobalAchievement
+
+from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
 
 class Campaign():
@@ -19,6 +22,11 @@ class Campaign():
     def get_scenario(id: int) -> Scenario:
         return next(
             s for s in SCENARIOS if s.id == id)
+
+    @staticmethod
+    def get_global_achievement(title: str) -> GlobalAchievement:
+        return next(
+            s for s in GLOBAL_ACHIEVEMENTS if s.title == title)
 
     def complete_scenario(self, scenario_id: int):
 
@@ -47,7 +55,7 @@ class Campaign():
 
         # only add new scenarios that haven't already been found.
         new_scenarios = [
-            s for s in scenario.new_locations if s not in self.available_scenarios]
+            s for s in scenario.new_locations if s not in self.available_scenarios + self.completed_scenarios]
 
         # remove scenario just completed and add the new ones
         self.available_scenarios.remove(scenario_id)
@@ -120,3 +128,8 @@ class Campaign():
                          for s in s_blocked for n in s.new_locations]
 
         return nodes_todo + edges_todo + nodes_done + edges_done + nodes_blocked + edges_blocked
+
+    def create_global_banner_imgs(self):
+        global_achievements = [
+            self.get_global_achievement(t) for t in self.global_achievements]
+        return [Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}') for ga in global_achievements]

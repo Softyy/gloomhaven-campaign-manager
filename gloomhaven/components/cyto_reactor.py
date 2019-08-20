@@ -6,7 +6,7 @@ from ..models.campaign import Campaign
 
 from .. import app
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID
 
 
 @app.callback(Output(STORE_ID, 'data'),
@@ -30,3 +30,10 @@ def update_cyto_graph(store_data):
     store_data = json.loads(store_data or "{}")
     campaign = Campaign(**store_data)
     return campaign.to_cyto_graph()
+
+@app.callback(Output(BANNERS_ID, 'children'),
+              [Input(STORE_ID, 'data')])
+def update_global_achievements_displayed(store_data):
+    store_data = json.loads(store_data or "{}")
+    campaign = Campaign(**store_data)
+    return campaign.create_global_banner_imgs()
