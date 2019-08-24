@@ -1,103 +1,103 @@
 [{
     "id": 1,
     "title": "City Rule: Militaristic",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/city-rule-militaristic.png"
   },
   {
     "id": 2,
     "title": "The Merchant Flees",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-merchant-flees.png"
   },
   {
     "id": 3,
     "title": "The Dead Invade",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-dead-invade.png"
   },
   {
     "id": 4,
     "title": "End of the Invasion",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/end-of-the-invasion.png"
   },
   {
     "id": 5,
     "title": "The Power of Enhancement",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-power-of-enhancement.png"
   },
   {
     "id": 6,
     "title": "The Rift Neutralized",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-rift-closed.png"
   },
   {
     "id": 7,
     "title": "Artifact: Recovered",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/artifact-recovered.png"
   },
   {
     "id": 8,
     "title": "Ancient Technology",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/ancient-technology.png"
   },
   {
     "id": 9,
     "title": "The Edge of Darkness",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-edge-of-darkness.png"
   },
   {
     "id": 10,
     "title": "Artifact: Cleansed",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/artifact-cleansed.png"
   },
 
   {
     "id": 11,
     "title": "The Drake Slain",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-drake-slain.png"
   },
   {
     "id": 12,
     "title": "City Rule: Demonic",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/city-rule-demonic.png"
   },
   {
     "id": 13,
     "title": "Artifact: Lost",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/artifact-lost.png"
   },
   {
     "id": 14,
     "title": "The Voice Freed",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-voice-freed.png"
   },
 
   {
     "id": 15,
     "title": "The Voice Silenced",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/the-voice-silenced.png"
   },
   {
     "id": 16,
     "title": "Water-Breathing",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/water-breathing.png"
   },
   {
     "id": 17,
     "title": "End of Corruption",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/end-of-corruption.png"
   },
   {
     "id": 18,
     "title": "Annihilation of Order",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/annihilation-of-order.png"
   },
   {
     "id": 19,
     "title": "End of Gloom",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/end-of-gloom.png"
   },
   {
     "id": 20,
     "title": "City Rule: Economic",
-    "banner": "https://via.placeholder.com/240x60"
+    "banner": "./assets/achievements/city-rule-economic.png"
   }
 ]

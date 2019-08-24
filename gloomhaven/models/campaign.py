@@ -130,4 +130,4 @@ class Campaign():
     def create_global_banner_imgs(self):
         global_achievements = [
             self.get_global_achievement(t) for t in self.global_achievements]
-        return [Img(style={"display": "table-caption", "width": "240px"})]+[Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}', className="rotate90") for ga in global_achievements]
+        return [Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}', className="banners") for ga in global_achievements]

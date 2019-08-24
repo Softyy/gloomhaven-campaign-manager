@@ -109,7 +109,7 @@
     "id": 19,
     "title": "Forgotten Crypt",
     "requirements": ["The Power of Enhancement"],
-    "party_achievements": ["Stonebreaker's Censer"],
+    "party_achievements": ["Stonebreaker's Censor"],
     "new_locations": [27]
   },
   {
