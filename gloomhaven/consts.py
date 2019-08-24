@@ -11,6 +11,12 @@ BANNERS_ID = 'banners'
 CLEAR_DATA_ID = 'clear-data'
 DOWNLOAD_DATA_ID = 'download-data'
 UNDO_STEP_ID = 'undo'
+OPEN_MODAL_ID = 'open-modal'
+CLOSE_MODAL_ID = 'close-modal'
+MODAL_ID = 'modal'
+MODAL_HEADER_ID = 'modal-header'
+MODAL_BODY_ID = 'modal-body'
+MODAL_FOOTER_ID = 'modal-footer'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
