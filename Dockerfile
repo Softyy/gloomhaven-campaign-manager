@@ -9,8 +9,11 @@ RUN mkdir -p /app
 COPY requirements.txt /app
 WORKDIR /app
 
-RUN pip3 install --no-cache-dir -r requirements.txt 
-RUN pip3 install --no-cache-dir gunicorn
+RUN apk add --no-cache --virtual .build-deps \
+  gcc \
+  && pip3 install --no-cache-dir -r requirements.txt \
+  && pip3 install --no-cache-dir gunicorn \
+  && apk del .build-deps
 
 COPY . .
 
