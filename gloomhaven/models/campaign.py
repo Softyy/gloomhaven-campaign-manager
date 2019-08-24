@@ -9,13 +9,14 @@ from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
 class Campaign():
 
-    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], creation_date=dt.now()):
+    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], creation_date=dt.today().strftime("%Y-%m-%d")):
         self.available_scenarios = available_scenarios
         self.completed_scenarios = completed_scenarios
         self.attempted_scenarios = attempted_scenarios
         self.failed_scenarios = failed_scenarios
         self.global_achievements = global_achievements
         self.party_achievements = party_achievements
+        self.creation_date = creation_date
 
     @staticmethod
     def get_scenario(id: int) -> Scenario:
@@ -136,7 +137,7 @@ class Campaign():
     @classmethod
     def undo_last_attempt(cls, campagin):
         campagin.completed_scenarios.pop(-1)
-        new_campaign = cls()
+        new_campaign = cls(creation_date=campagin.creation_date)
         for completed_scenario_id in campagin.completed_scenarios:
             new_campaign.complete_scenario(completed_scenario_id)
         return new_campaign

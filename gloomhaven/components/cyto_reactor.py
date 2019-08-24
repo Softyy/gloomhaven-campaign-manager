@@ -24,14 +24,14 @@ from .downloader import dict_to_inline_href
                State(UNDO_STEP_ID, 'n_clicks_timestamp')])
 def update_local_storage(node, reset_click, undo_click, store_data, reset_click_ts, undo_click_ts):
     node_data = node['data'] if node else None
-    node_ts = node['timeStamp'] if node else None
+    node_ts = node['timeStamp'] if node else -1
     store_data = store_data or {}
-    if node_data is None or node_data['type'] != 'blue':
-        return no_update, dict_to_inline_href(store_data)
 
     # Reset the data to the base constructor of campaign
     if reset_click is not None and reset_click_ts > node_ts:
         campaign = Campaign()
+    elif node_data is None or node_data['type'] != 'blue':
+        return no_update, dict_to_inline_href(store_data)
     # User wants to undo the last action.
     elif undo_click is not None and undo_click_ts > node_ts:
         campaign = Campaign(**store_data)
