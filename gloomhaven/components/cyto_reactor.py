@@ -9,27 +9,39 @@ from ..models.campaign import Campaign
 
 from .. import app
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID, UNDO_STEP_ID
 
 from .downloader import dict_to_inline_href
 
 
 @app.callback([Output(STORE_ID, 'data'),
                Output(DOWNLOAD_DATA_ID, 'href')],
-              [Input(CYTO_GRAPH_ID, 'tapNodeData'),
-               Input(CLEAR_DATA_ID, 'n_clicks')],
-              [State(STORE_ID, 'data')])
-def update_local_storage(node_data, n_clicks, store_data):
+              [Input(CYTO_GRAPH_ID, 'tapNode'),
+               Input(CLEAR_DATA_ID, 'n_clicks'),
+               Input(UNDO_STEP_ID, 'n_clicks')],
+              [State(STORE_ID, 'data'),
+               State(CLEAR_DATA_ID, 'n_clicks_timestamp'),
+               State(UNDO_STEP_ID, 'n_clicks_timestamp')])
+def update_local_storage(node, reset_click, undo_click, store_data, reset_click_ts, undo_click_ts):
+    node_data = node['data'] if node else None
+    node_ts = node['timeStamp'] if node else None
     store_data = store_data or {}
-    href = dict_to_inline_href(store_data)
-    if node_data is None and n_clicks is not None:
-        return {}, dict_to_inline_href({})
     if node_data is None or node_data['type'] != 'blue':
-        return no_update, href
-    campaign = Campaign(**store_data)
-    scenario = campaign.get_scenario(int(node_data['id']))
-    campaign.complete_scenario(scenario.id)
-    return campaign.to_dict(), href
+        return no_update, dict_to_inline_href(store_data)
+
+    # Reset the data to the base constructor of campaign
+    if reset_click is not None and reset_click_ts > node_ts:
+        campaign = Campaign()
+    # User wants to undo the last action.
+    elif undo_click is not None and undo_click_ts > node_ts:
+        campaign = Campaign(**store_data)
+        campaign = Campaign.undo_last_attempt(campaign)
+    # User wants to progress the campaign
+    else:
+        campaign = Campaign(**store_data)
+        scenario = campaign.get_scenario(int(node_data['id']))
+        campaign.complete_scenario(scenario.id)
+    return campaign.to_dict(), dict_to_inline_href(campaign.to_dict())
 
 
 @app.callback([Output(CYTO_GRAPH_ID, 'elements'), Output(BANNERS_ID, 'children')],

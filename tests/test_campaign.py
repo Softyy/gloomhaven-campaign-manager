@@ -13,6 +13,9 @@ class TestCampaignModel(unittest.TestCase):
         s = campaign.get_scenario(73)
         self.assertEqual(s.title, "Rockslide Ridge")
 
+        s = campaign.get_scenario(50)
+        self.assertEqual(s.id, 50)
+
     def test_scenario_requirements_check(self):
         campaign = Campaign(party_achievements=[
                             "The Scepter and the Voice"], global_achievements=["The Voice Freed"])

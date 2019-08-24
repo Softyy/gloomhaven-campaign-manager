@@ -1,3 +1,4 @@
+from datetime import datetime as dt
 from dash_html_components import Img
 
 from ..models.scenario import Scenario
@@ -8,7 +9,7 @@ from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
 class Campaign():
 
-    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = []):
+    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], creation_date=dt.now()):
         self.available_scenarios = available_scenarios
         self.completed_scenarios = completed_scenarios
         self.attempted_scenarios = attempted_scenarios
@@ -131,3 +132,19 @@ class Campaign():
         global_achievements = [
             self.get_global_achievement(t) for t in self.global_achievements]
         return [Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}', className="banners") for ga in global_achievements]
+
+    @classmethod
+    def undo_last_attempt(cls, campagin):
+        campagin.completed_scenarios.pop(-1)
+        new_campaign = cls()
+        for completed_scenario_id in campagin.completed_scenarios:
+            new_campaign.complete_scenario(completed_scenario_id)
+        return new_campaign
+
+    def __repr__(self):
+        return f'available_scenarios: {self.available_scenarios}, completed_scenarios: {self.completed_scenarios}'
+
+    def remove_completed_scenario(self, scenario_id: int):
+        scenario = self.get_scenario(scenario_id)
+        if scenario_id not in self.completed_scenarios:
+            raise Exception(f'Scenario {scenario} hasn\'t been completed')
