@@ -11,6 +11,7 @@ WORKDIR /app
 
 RUN apk add --no-cache --virtual .build-deps \
   gcc \
+  libc-dev \
   && pip3 install --no-cache-dir -r requirements.txt \
   && pip3 install --no-cache-dir gunicorn \
   && apk del .build-deps
