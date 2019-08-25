@@ -11,16 +11,13 @@ def render():
             dbc.ModalBody("This is the content of the modal",
                           id=MODAL_BODY_ID),
             dbc.ModalFooter([
-                dbc.Button("Close", id=CLOSE_MODAL_ID, color="info",
-                           className=""),
+                dbc.Button("Close", id=CLOSE_MODAL_ID, color="info"),
                 html.Div([
                     dbc.Button("Fail",
                                id=FAIL_SCENARIO_ID, color="danger"),
                     dbc.Button("Complete",
                                id=COMPLETE_SCENARIO_ID, color="success")
-                ],
-                    className=""
-                )],
+                ])],
                 className="d-flex justify-content-between",
                 id=MODAL_FOOTER_ID
             ),

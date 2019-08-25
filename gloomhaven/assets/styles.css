@@ -13,6 +13,37 @@ body {
   height: 240px;
 }
 
+.modal-header {
+  border-bottom: 0 none;
+}
+
+.modal-footer {
+  border-top: 0 none;
+}
+
+#modal .modal-content {
+  background: url("background.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #modal .modal-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  #modal .modal-content {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+}
+
 /* body,
 #react-entry-point {
   height: 100%
