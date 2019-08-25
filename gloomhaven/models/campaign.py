@@ -1,5 +1,5 @@
 from datetime import datetime as dt
-from dash_html_components import Img
+from dash_html_components import Img, P
 
 from ..models.scenario import Scenario
 from ..models.achievement import GlobalAchievement
@@ -149,3 +149,7 @@ class Campaign():
         scenario = self.get_scenario(scenario_id)
         if scenario_id not in self.completed_scenarios:
             raise Exception(f'Scenario {scenario} hasn\'t been completed')
+
+    @staticmethod
+    def text_to_html(text: str):
+        return [P(paragraph) for paragraph in text.split('\n')]

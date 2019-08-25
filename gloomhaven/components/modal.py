@@ -3,6 +3,7 @@ from dash.exceptions import PreventUpdate
 from dash import no_update
 
 from ..models.campaign import Campaign
+from ..models.scenario import Scenario
 
 from .. import app
 
@@ -19,5 +20,6 @@ from ..consts import MODAL_ID, OPEN_MODAL_ID, CLOSE_MODAL_ID, CYTO_GRAPH_ID, MOD
 def toggle_modal(node, close_clicks, is_open):
     node_data = node['data'] if node else None
     if node_data or close_clicks:
-        return not is_open, f'{node_data["id"]} {node_data["label"]}', 'THIS IS THE BODY'
+        scenario: Scenario = Campaign.get_scenario(int(node_data["id"]))
+        return not is_open, f'{scenario.id} - {scenario.title}', Campaign.text_to_html(scenario.introduction)
     return is_open, "", ""
