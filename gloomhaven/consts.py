@@ -19,7 +19,8 @@ MODAL_BODY_ID = 'modal-body'
 MODAL_FOOTER_ID = 'modal-footer'
 COMPLETE_SCENARIO_ID = 'scenario-completed'
 FAIL_SCENARIO_ID = 'scenario-failed'
-TOAST_ACHIEVEMENT_ID = 'toast-notifications'
+TOAST_ACHIEVEMENT_ID = 'toast-achievements'
+TOAST_NEW_LOCATION_ID = 'toast-new-locations'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}

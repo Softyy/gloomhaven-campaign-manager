@@ -12,15 +12,16 @@ def render():
                           id=MODAL_BODY_ID),
             dbc.ModalFooter([
                 dbc.Button("Close", id=CLOSE_MODAL_ID, color="info",
-                           className="mr-auto"),
+                           className=""),
                 html.Div([
                     dbc.Button("Fail",
                                id=FAIL_SCENARIO_ID, color="danger"),
                     dbc.Button("Complete",
                                id=COMPLETE_SCENARIO_ID, color="success")
                 ],
-                    className="ml-auto"
+                    className=""
                 )],
+                className="d-flex justify-content-between",
                 id=MODAL_FOOTER_ID
             ),
         ],
