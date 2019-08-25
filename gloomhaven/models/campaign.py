@@ -1,5 +1,5 @@
 from datetime import datetime as dt
-from dash_html_components import Img, P
+from dash_html_components import Img, P, H6
 
 from ..models.scenario import Scenario
 from ..models.achievement import GlobalAchievement
@@ -168,11 +168,11 @@ class Campaign():
     def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, progress_markers=[]):
         scenario = cls.get_scenario(scenario_id)
         introduction_section = [
-            P("Introduction", style={"border-bottom": "1px solid black"})]
+            H6("Introduction", style={"border-bottom": "1px solid black"})]
         introduction_section += cls.text_to_html(scenario.introduction)
 
         conclusion_section = [
-            P("Conclusion", style={"border-bottom": "1px solid black"})]
+            H6("Conclusion", style={"border-bottom": "1px solid black"})]
         conclusion_section += cls.text_to_html(scenario.conclusion)
 
         return introduction_section + (conclusion_section if show_conclusion else [])

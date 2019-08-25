@@ -1,4 +1,3 @@
-from dash_html_components import P
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 from dash import no_update
