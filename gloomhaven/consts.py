@@ -17,6 +17,8 @@ MODAL_ID = 'modal'
 MODAL_HEADER_ID = 'modal-header'
 MODAL_BODY_ID = 'modal-body'
 MODAL_FOOTER_ID = 'modal-footer'
+COMPLETE_SCENARIO_ID = 'scenario-completed'
+FAIL_SCENARIO_ID = 'scenario-failed'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
@@ -50,6 +52,48 @@ SCENARIO_NODE_PARENTS = [
     # CITY_QUEST_NODE,
     # ROAD_QUEST_NODE
 ]
+
+CYTO_STYLESHEET = [
+    {
+        'selector': '.blue',
+        'style': {
+            'content': 'data(label)',
+            'background-color': 'blue',
+        }
+    },
+    {
+        'selector': '.green',
+        'style': {
+            # 'content': 'data(label)',
+            'background-color': 'green',
+        }
+    },
+    {
+        'selector': '.red',
+        'style': {
+            'content': 'data(label)',
+            'background-color': 'red',
+        }
+    },
+    {
+        'selector': '.dummy',
+        'style': {}
+    }
+    # {
+    #     'selector': '.triangle',
+    #     'style': {
+    #         # 'shape': 'triangle'
+    #     }
+    # },
+    # {
+    #     'selector': 'edge',
+    #     'style': {
+    #         'curve-style': 'bezier',
+    #         'line-color': 'blue'
+    #     }
+    # },
+]
+
 
 # Game database as consts.
 
