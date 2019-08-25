@@ -165,8 +165,15 @@ class Campaign():
         return party_section if len(party_section) > 1 else [] + global_section if len(global_section) > 1 else []
 
     @classmethod
-    def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, progress_markers=[]):
+    def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, show_requirements_not_met=False, progress_markers=[]):
         scenario = cls.get_scenario(scenario_id)
+
+        if show_requirements_not_met:
+            requirements_section = [
+                H6("Requirements", style={"border-bottom": "1px solid black"})]
+            requirements_section += scenario.requirements_to_html()
+            return requirements_section
+
         introduction_section = [
             H6("Introduction", style={"border-bottom": "1px solid black"})]
         introduction_section += cls.text_to_html(scenario.introduction)

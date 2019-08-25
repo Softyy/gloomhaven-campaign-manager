@@ -1,3 +1,6 @@
+from dash_html_components import P
+
+
 class Scenario():
 
     def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = ""):
@@ -17,6 +20,19 @@ class Scenario():
         self.introduction = introduction
         self.treasures = treasures
         self.conclusion = conclusion
+
+    def requirements_to_html(self):
+        requirements = self.text_and_cond_to_html(
+            self.requirements, "Complete")
+        anti_requirements = self.text_and_cond_to_html(
+            self.anti_requirements, "Incomplete")
+        alt_requirements = self.text_and_cond_to_html(
+            self.alt_requirements, "Complete")
+        return requirements + anti_requirements + ([P("Or")] + alt_requirements if len(alt_requirements) > 0 else [])
+
+    @staticmethod
+    def text_and_cond_to_html(requirements: str, cond: str):
+        return [P(f'{requirement} ({cond})') for requirement in requirements]
 
     def __repr__(self):
         return f'{self.id}-{self.title}'
