@@ -20,10 +20,6 @@ h6 {
   font-family: "Pirata One";
 }
 
-.banners {
-  height: 240px;
-}
-
 .modal-header {
   border-bottom: 0 none;
 }
@@ -47,6 +43,10 @@ h6 {
     padding-left: 60px;
     padding-right: 60px;
   }
+
+  .banners {
+    height: 240px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -55,6 +55,10 @@ h6 {
     padding-right: 25px;
     padding-top: 25px;
     padding-bottom: 35px;
+  }
+
+  .banners {
+    height: 120px;
   }
 }
 

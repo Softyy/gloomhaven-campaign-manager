@@ -4,4 +4,4 @@ from ..consts import BANNERS_ID
 
 
 def render():
-    return html.Div(id=BANNERS_ID, style={"height": "240px"})
+    return html.Div(id=BANNERS_ID, className="banners")
