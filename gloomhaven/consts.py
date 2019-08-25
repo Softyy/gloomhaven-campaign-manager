@@ -60,13 +60,15 @@ CYTO_STYLESHEET = [
         'selector': '.blue',
         'style': {
             'content': 'data(label)',
-            'background-color': 'blue',
+            'font-family': 'Pirata One',
+            'background-color': 'blue'
         }
     },
     {
         'selector': '.green',
         'style': {
             # 'content': 'data(label)',
+            'font-family': 'Pirata One',
             'background-color': 'green',
         }
     },
@@ -74,6 +76,7 @@ CYTO_STYLESHEET = [
         'selector': '.red',
         'style': {
             'content': 'data(label)',
+            'font-family': 'Pirata One',
             'background-color': 'red',
         }
     },
