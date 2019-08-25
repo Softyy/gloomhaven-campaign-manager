@@ -1,6 +1,6 @@
 class Scenario():
 
-    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = []):
+    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = ""):
         self.id = id
         self.title = title
         self.requirements = requirements
@@ -16,6 +16,7 @@ class Scenario():
         self.scenario_type = scenario_type
         self.introduction = introduction
         self.treasures = treasures
+        self.conclusion = conclusion
 
     def __repr__(self):
         return f'{self.id}-{self.title}'

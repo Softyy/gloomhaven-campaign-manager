@@ -2,5 +2,7 @@ version: "3"
 
 services:
   dash:
+    build: .
     image: cjadkins/gloomhaven-campaign-manager
-    restart: always
+    ports:
+      - 8050:8050

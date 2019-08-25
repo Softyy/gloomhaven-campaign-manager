@@ -61,6 +61,8 @@ class Campaign():
         self.available_scenarios.remove(scenario_id)
         self.available_scenarios.extend(new_scenarios)
 
+        return scenario
+
     def fail_scenario(self, scenario_id: int):
         self.attempted_scenarios.append(scenario_id)
         self.failed_scenarios.append(scenario_id)
@@ -161,6 +163,19 @@ class Campaign():
         global_section += [P(a) for a in scenario.global_achievements]
 
         return party_section if len(party_section) > 1 else [] + global_section if len(global_section) > 1 else []
+
+    @classmethod
+    def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, progress_markers=[]):
+        scenario = cls.get_scenario(scenario_id)
+        introduction_section = [
+            P("Introduction", style={"border-bottom": "1px solid black"})]
+        introduction_section += cls.text_to_html(scenario.introduction)
+
+        conclusion_section = [
+            P("Conclusion", style={"border-bottom": "1px solid black"})]
+        conclusion_section += cls.text_to_html(scenario.conclusion)
+
+        return introduction_section + (conclusion_section if show_conclusion else [])
 
     @staticmethod
     def text_to_html(text: str):
