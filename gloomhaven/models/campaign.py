@@ -150,6 +150,18 @@ class Campaign():
         if scenario_id not in self.completed_scenarios:
             raise Exception(f'Scenario {scenario} hasn\'t been completed')
 
+    def create_toast_achievement_of_unlocks(self, scenario_id: int):
+        scenario = self.get_scenario(scenario_id)
+        party_section = [
+            P("Party", style={"border-bottom": "1px solid black"})]
+        party_section += [P(a) for a in scenario.party_achievements]
+
+        global_section = [
+            P("Global", style={"border-bottom": "1px solid black"})]
+        global_section += [P(a) for a in scenario.global_achievements]
+
+        return party_section if len(party_section) > 1 else [] + global_section if len(global_section) > 1 else []
+
     @staticmethod
     def text_to_html(text: str):
         return [P(paragraph) for paragraph in text.split('\n')]
