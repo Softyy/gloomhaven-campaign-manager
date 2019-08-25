@@ -57,46 +57,41 @@ SCENARIO_NODE_PARENTS = [
 
 CYTO_STYLESHEET = [
     {
-        'selector': '.blue',
+        'selector': '.available',
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': 'blue'
+            'background-color': '#007bff'
         }
     },
     {
-        'selector': '.green',
+        'selector': '.completed',
         'style': {
-            # 'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': 'green',
+            'background-color': '#28a745',
         }
     },
     {
-        'selector': '.red',
+        'selector': '.blocked',
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': 'red',
+            'background-color': '#dc3545',
         }
     },
+    {
+        'selector': '.attempted',
+        'style': {
+            'content': 'data(label)',
+            'font-family': 'Pirata One',
+            'background-color': '#ffc107',
+        }
+    },
+    # This last entry needs to be here for the logic on the hover to work.
     {
         'selector': '.dummy',
         'style': {}
     }
-    # {
-    #     'selector': '.triangle',
-    #     'style': {
-    #         # 'shape': 'triangle'
-    #     }
-    # },
-    # {
-    #     'selector': 'edge',
-    #     'style': {
-    #         'curve-style': 'bezier',
-    #         'line-color': 'blue'
-    #     }
-    # },
 ]
 
 

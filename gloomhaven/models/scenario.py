@@ -3,7 +3,7 @@ from dash_html_components import P
 
 class Scenario():
 
-    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = ""):
+    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = "", goal: str = "Kill all enemies"):
         self.id = id
         self.title = title
         self.requirements = requirements
@@ -20,6 +20,7 @@ class Scenario():
         self.introduction = introduction
         self.treasures = treasures
         self.conclusion = conclusion
+        self.goal = goal
 
     def requirements_to_html(self):
         requirements = self.text_and_cond_to_html(

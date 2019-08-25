@@ -26,7 +26,7 @@ def update_cyto_graph(ts, store_data):
               [Input(CYTO_GRAPH_ID, 'mouseoverNodeData')],
               [State(CYTO_GRAPH_ID, 'stylesheet')])
 def show_past_scenario_title(node_data, stylesheet):
-    if node_data is None or node_data is {} or node_data['type'] == 'blue':
+    if node_data is None or node_data is {} or node_data['type'] == 'available' or node_data['type'] == 'attempted':
         raise PreventUpdate
     last_hovered_element_style = stylesheet.pop(-1)
 

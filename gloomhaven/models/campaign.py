@@ -94,7 +94,7 @@ class Campaign():
     def to_cyto_graph(self):
         return self.create_cyto_elements_for_scenarios()
 
-    def create_scenario_cyto_node(self, scenario: Scenario, className='blue'):
+    def create_scenario_cyto_node(self, scenario: Scenario, className='available'):
         return {
             'data': {'id': scenario.id, 'label': scenario.title, 'parent': scenario.scenario_type, 'type': className},
             'classes': className
@@ -110,26 +110,30 @@ class Campaign():
             s for s in self.available_scenarios if self.scenario_requirements_met(s)]
         impossible_s = [
             s for s in self.available_scenarios if not self.scenario_requirements_met(s)]
+        attempted_s = [
+            s for s in possible_s if s in self.attempted_scenarios]
+        unattempted_s = [
+            s for s in possible_s if s not in self.attempted_scenarios]
 
-        s_todo = [self.get_scenario(s) for s in possible_s]
+        s_todo = [self.get_scenario(s) for s in unattempted_s]
         nodes_todo = [self.create_scenario_cyto_node(
-            s, 'blue') for s in s_todo]
-        # edges_todo = [self.create_cyto_edge(s.id, n)
-        #               for s in s_todo for n in s.new_locations]
+            s, 'available') for s in s_todo]
+
+        s_tried = [self.get_scenario(s) for s in attempted_s]
+        nodes_tried = [self.create_scenario_cyto_node(
+            s, 'attempted') for s in s_tried]
 
         s_done = [self.get_scenario(s) for s in self.completed_scenarios]
         nodes_done = [self.create_scenario_cyto_node(
-            s, 'green') for s in s_done]
+            s, 'completed') for s in s_done]
         edges_done = [self.create_cyto_edge(s.id, n)
                       for s in s_done for n in s.new_locations]
 
         s_blocked = [self.get_scenario(s) for s in impossible_s]
         nodes_blocked = [self.create_scenario_cyto_node(
-            s, 'red') for s in s_blocked]
-        # edges_blocked = [self.create_cyto_edge(s.id, n)
-        #                  for s in s_blocked for n in s.new_locations]
+            s, 'blocked') for s in s_blocked]
 
-        return nodes_todo + nodes_done + edges_done + nodes_blocked
+        return nodes_todo + nodes_tried + nodes_done + edges_done + nodes_blocked
 
     def create_global_banner_imgs(self):
         global_achievements = [
@@ -178,11 +182,15 @@ class Campaign():
             H6("Introduction", style={"border-bottom": "1px solid black"})]
         introduction_section += cls.text_to_html(scenario.introduction)
 
+        goal_section = [
+            H6("Goal", style={"border-bottom": "1px solid black"})]
+        goal_section += cls.text_to_html(scenario.goal)
+
         conclusion_section = [
             H6("Conclusion", style={"border-bottom": "1px solid black"})]
         conclusion_section += cls.text_to_html(scenario.conclusion)
 
-        return introduction_section + (conclusion_section if show_conclusion else [])
+        return introduction_section + goal_section + (conclusion_section if show_conclusion else [])
 
     @staticmethod
     def text_to_html(text: str):

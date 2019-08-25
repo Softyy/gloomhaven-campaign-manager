@@ -60,7 +60,7 @@ def update_local_storage_and_handle_modal(node, success_click_ts, fail_click_ts,
 
     elif first_arg_is_greatest(node_ts, success_click_ts, fail_click_ts, erase_click_ts, close_click_ts):
         scenario: Scenario = Campaign.get_scenario(int(node_data["id"]))
-        return no_update, no_update, True, f'{scenario.id} - {scenario.title}', Campaign.create_modal_scenario_text_body(scenario.id, show_conclusion=node_data['type'] == 'green', show_requirements_not_met=node_data['type'] == 'red'), no_update, no_update
+        return no_update, no_update, True, f'{scenario.id} - {scenario.title}', Campaign.create_modal_scenario_text_body(scenario.id, show_conclusion=node_data['type'] == 'completed', show_requirements_not_met=node_data['type'] == 'blocked'), no_update, no_update
 
     elif first_arg_is_greatest(close_click_ts, node_ts, success_click_ts, fail_click_ts, erase_click_ts):
         return no_update, no_update, False, no_update, no_update, no_update, no_update
@@ -78,7 +78,7 @@ def hide_buttons_for_completed_scenario(node, success_click_ts):
     node_ts = node['timeStamp'] if node else -1
     success_click_ts = success_click_ts or -1
 
-    if node_data['type'] != 'blue' or success_click_ts > node_ts:
+    if node_data['type'] not in ('available', 'attempted') or success_click_ts > node_ts:
         hide = {'display': 'none'}
         return hide, hide
     else:
