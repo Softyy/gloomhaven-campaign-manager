@@ -168,6 +168,9 @@ class Campaign():
 
         return party_section if len(party_section) > 1 else [] + global_section if len(global_section) > 1 else []
 
+    def create_html_party_achievements(self):
+        return [P(a) for a in self.party_achievements]
+
     @classmethod
     def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, show_requirements_not_met=False, progress_markers=[]):
         scenario = cls.get_scenario(scenario_id)

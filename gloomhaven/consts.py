@@ -11,16 +11,28 @@ BANNERS_ID = 'banners'
 CLEAR_DATA_ID = 'clear-data'
 DOWNLOAD_DATA_ID = 'download-data'
 UNDO_STEP_ID = 'undo'
-OPEN_MODAL_ID = 'open-modal'
-CLOSE_MODAL_ID = 'close-modal'
-MODAL_ID = 'modal'
-MODAL_HEADER_ID = 'modal-header'
-MODAL_BODY_ID = 'modal-body'
-MODAL_FOOTER_ID = 'modal-footer'
+
+OPEN_MODAL_ID = 'open-scenario-modal'
+CLOSE_MODAL_ID = 'close-scenario-modal'
+MODAL_ID = 'scenario-modal'
+MODAL_HEADER_ID = 'scenario-modal-header'
+MODAL_BODY_ID = 'scenario-modal-body'
+MODAL_FOOTER_ID = 'scenario-modal-footer'
+
+OPEN_CAMPAIGN_MODAL_ID = 'open-campaign-modal'
+CLOSE_CAMPAIGN_MODAL_ID = 'close-campaign-modal'
+CAMPAIGN_MODAL_ID = 'campaign-modal'
+CAMPAIGN_MODAL_HEADER_ID = 'campaign-modal-header'
+CAMPAIGN_MODAL_BODY_ID = 'campaign-modal-body'
+CAMPAIGN_MODAL_FOOTER_ID = 'campaign-modal-footer'
+
 COMPLETE_SCENARIO_ID = 'scenario-completed'
 FAIL_SCENARIO_ID = 'scenario-failed'
 TOAST_ACHIEVEMENT_ID = 'toast-achievements'
 TOAST_NEW_LOCATION_ID = 'toast-new-locations'
+
+PROSPERITY_ID = 'prosperity-counter'
+PARTY_ACHIEVEMENT_LIST_ID = 'party-achievements'
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
