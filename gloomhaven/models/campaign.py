@@ -1,8 +1,9 @@
 from datetime import datetime as dt
-from dash_html_components import Img, P, H6
+from dash_html_components import Img, P, H6, Div
 
 from ..models.scenario import Scenario
 from ..models.achievement import GlobalAchievement
+from ..models.scenario_overview import ScenarioOverview
 
 from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
@@ -138,7 +139,7 @@ class Campaign():
     def create_global_banner_imgs(self):
         global_achievements = [
             self.get_global_achievement(t) for t in self.global_achievements]
-        return [Img(src=f'{ga.banner}?text={ga.title.replace(" ","+")}', className="banners") for ga in global_achievements]
+        return [Img(src=f'{ga.banner}', className="banners") for ga in global_achievements]
 
     @classmethod
     def undo_last_attempt(cls, campagin):
@@ -174,6 +175,7 @@ class Campaign():
     @classmethod
     def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, show_requirements_not_met=False, progress_markers=[]):
         scenario = cls.get_scenario(scenario_id)
+        scenario_overview = ScenarioOverview(scenario)
 
         if show_requirements_not_met:
             requirements_section = [
@@ -185,15 +187,52 @@ class Campaign():
             H6("Introduction", style={"border-bottom": "1px solid black"})]
         introduction_section += cls.text_to_html(scenario.introduction)
 
+        special_rules_section = []
+
+        if scenario.special_rules != "":
+            special_rules_section += [H6("Special Rules",
+                                         style={"border-bottom": "1px solid black"})]
+            special_rules_section += cls.text_to_html(scenario.special_rules)
+
         goal_section = [
             H6("Goal", style={"border-bottom": "1px solid black"})]
         goal_section += cls.text_to_html(scenario.goal)
+
+        map_section = scenario_overview.to_html()
+
+        midgame_section = []
+
+        if 1 in progress_markers or (show_conclusion and scenario.event_1.exists()):
+            midgame_section += [Div(
+                [H6(1, style={"position": "absolute", "font-size": "x-large", "color": "#861c21", "margin": "5px"}),
+                 Img(src="./assets/rule.png",
+                     className="d-flex", style={"max-width": "400px"})],
+                className="d-flex justify-content-center align-items-center")]
+            midgame_section += cls.text_to_html(scenario.event_1.text)
+
+            if scenario.event_1.special_rules != "":
+                midgame_section += [H6("Special Rules",
+                                       style={"border-bottom": "1px solid black"})]
+                midgame_section += cls.text_to_html(
+                    scenario.event_1.special_rules)
+
+            if scenario.event_1.boss_special_1 != "":
+                midgame_section += [H6("Boss Special 1",
+                                       style={"border-bottom": "1px solid black"})]
+                midgame_section += cls.text_to_html(
+                    scenario.event_1.boss_special_1)
+
+            if scenario.event_1.boss_special_2 != "":
+                midgame_section += [H6("Boss Special 2",
+                                       style={"border-bottom": "1px solid black"})]
+                midgame_section += cls.text_to_html(
+                    scenario.event_1.boss_special_2)
 
         conclusion_section = [
             H6("Conclusion", style={"border-bottom": "1px solid black"})]
         conclusion_section += cls.text_to_html(scenario.conclusion)
 
-        return introduction_section + goal_section + (conclusion_section if show_conclusion else [])
+        return introduction_section + special_rules_section + map_section + goal_section + midgame_section + (conclusion_section if show_conclusion else [])
 
     @staticmethod
     def text_to_html(text: str):

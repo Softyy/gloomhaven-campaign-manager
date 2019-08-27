@@ -5,7 +5,7 @@ from .scenario_event import ScenarioEvent
 
 class Scenario():
 
-    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = "", goal: str = "Kill all enemies", board_square: str = "A-1", tiles: [str] = ["A1a", "A2b"], event_1: ScenarioEvent = ScenarioEvent(), rewards: [str] = [], special_rules: str = ""):
+    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = "", goal: str = "Kill all enemies", board_square: str = "A-1", tiles: [str] = ["A1a", "A2b"], event_1: ScenarioEvent = {}, rewards: [str] = [], special_rules: str = ""):
         self.id = id
         self.title = title
         self.requirements = requirements
@@ -25,7 +25,7 @@ class Scenario():
         self.goal = goal
         self.tiles = tiles
         self.board_square = board_square
-        self.event_1 = event_1
+        self.event_1 = ScenarioEvent(**event_1)
         self.rewards = rewards
         self.special_rules = special_rules
 

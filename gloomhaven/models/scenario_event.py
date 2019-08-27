@@ -4,3 +4,6 @@ class ScenarioEvent():
         self.boss_special_1 = boss_special_1
         self.boss_special_2 = boss_special_2
         self.special_rules = special_rules
+
+    def exists(self):
+        return len(self.text) > 0

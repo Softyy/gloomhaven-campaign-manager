@@ -9,7 +9,9 @@
     "goal": "Kill all enemies",
     "conclusion": "With the last bandit dead, you take a moment to catch your breath and steel yourself against the visions of living remains ripping at your flesh. Your target is not among the dead, and you shudder to think what horrors still await you in the catacombs below. (2)",
     "tiles": ["L1a", "G1b", "I1b"],
-    "event_1": "Kicking through the door, you find yourself face-to-face with the reason these bandits chose this particular hole to nest in: animate bones - unholy abominations of necromantic power.\nNothing more to do but lay them to rest along with the remainder of this troublesome rabble."
+    "event_1": {
+      "text": "Kicking through the door, you find yourself face-to-face with the reason these bandits chose this particular hole to nest in: animate bones - unholy abominations of necromantic power.\nNothing more to do but lay them to rest along with the remainder of this troublesome rabble."
+    }
   },
   {
     "id": 2,
