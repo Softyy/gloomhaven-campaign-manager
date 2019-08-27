@@ -191,7 +191,14 @@
     "id": 13,
     "title": "Temple of the Seer",
     "global_achievements": ["End of the Invasion"],
-    "new_locations": [15, 17, 20]
+    "new_locations": [15, 17, 20],
+    "board_square": "N-3",
+    "introduction": "You reach out to some of your contacts concerning Jekserah's location, and end up with an odd bit of information from the Sanctuary of the Great Oak. They say there is a temple high in the Watcher Mountains dedicated to some unseen force that can answer any questions asked of it. Visitors must survive the journey and the trials that await inside the temple first, however.\nIt is a tradition among the order of the Great Oak to send its members on a pilgrimage to this temple, where, faced with the prospect of any knowledge they desire, they decline to ask a question, putting all their trust in the Great Oak instead. The Sanctuary provides you with some basic directions, and you head off.\nWhile your path is clear, the way is anything byt easy. You risk falling to your death numerous times as you scale the cliff up to the temple. Braving the harsh winds and loose rocks, you finally reach the top and head through the threshold into a large, open foyer.\n\"I am afraid I cannot accept visitors at this time,\" a disembodied voice booms through the room. \"Please come back in twelve years. I may be able to accommodate you then.\"\nBefore you can object, a group of massive stone constructs materialize before you.\n\"I know, I know,\" the voice says. \"You have questions, I have answers. Unfortunately, if you don't leave now, you won't have a head to ask the questions in the first place.\"\nYou ready your weapons. There's no way you're going to climb back down that cliff with nothing to show for it.",
+    "event_1": {
+      "text": "You open the door to the inner chamber, and more enemies materialize before your eyes. Flying red lizards, wailing spirits, and great, terrifying bears that don't seem at all happy to have been suddenly transported here."
+    },
+    "conclusion": "As the last of the creatures falls, the temple becomes eerily silent. You call out, but the strange voice offers no response. You begin banging the walls with your weapons and yelling even louder, making it clear that you will not leave until you have answers.\n\"ENOUGH!\" The power of the voice shakes the ground. \"I could easily kill you, you know. But normally a threat is enough to send you pathetic lesser begins scrambling. I don't necessarily like murder, however, so I will make you a deal. I will answer a single question for you, and then you will leave this place without further incident and never return.\"\n\"So what would you like? Great power? (15) Great wealth? (17) Or is the location of the necromancer you are hunting really that important to you? (20)\"",
+    "tiles": ["M1a", "N1b"]
   },
   {
     "id": 14,
@@ -206,7 +213,14 @@
   },
   {
     "id": 15,
-    "title": "Shrine of Strength"
+    "title": "Shrine of Strength",
+    "board_square": "B-11",
+    "goal": "Loot the treasure tile",
+    "introduction": "Nestled in a high valley deep in the Copperneck Mountains, this shrine is not easily found or accessible, but luckily, you know the way.\nThe shrine lies on the dge of a giant frozen lake surrounded by ancient, towering trees. Adorning the structure's stone face are innumerable symbols of power and strength, but you cannot determine whether the shrine was dedicated to some specific entity or simply to the general concept of strength.\n You enter through the large stone doors, hoping to find something within that increase your own power. As you walk along the entryway, you see a number of runic inscriptions carved into the walls. They are hard to make out, but you believe they profess an ideology of \"Strength begets strength.\" In order to increase one's own strength, one must first demonstrate strength.\nYou open the next set of doors and come face-to-face with that ideology in practice. A powerful Savvas materializes in front of you and wordlessly begins to channel a destructive force in your direction. You will need to prove yourself to get as whatever is in this temple.",
+    "special_rules": "Doors (a) are locked and open when any character occupies pressure plate (c) at the end of their turn.\nDoors (b) are locked and open when all characters occupy a pressure plate on one of the H tiles at the end of a turn. For two characters, the plates (d) must be occupied. For three characters, the plates (d) and (e) must be occupied. For four characters, the plate (d), (e) and (f) must be occupied.",
+    "conclusion": "You rush forward and take hold of the sigil of strength lying on a pedestal in the inner chamber. Immediately an overwhelming power surges through you and all of your foes disappear as quickly as they had appeared.\nYou feel a great strength welling up inside you. For an instant, your vision goes dark, and you see images of a strange runic alphabet.\nThe power dissipates and your vision returns. You quickly write down the symbols that you saw, though you do not know their meaning.\n Translate(INSERT TEXT HERE)",
+    "rewards": ["20 experience each"],
+    "tiles": ["L1a", "D1a", "H1b", "H3b", "C1a"]
   },
   {
     "id": 16,
