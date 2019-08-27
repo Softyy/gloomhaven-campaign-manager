@@ -110,12 +110,12 @@ CYTO_STYLESHEET = [
 # Game database as consts.
 
 with open(os.path.join(os.getcwd(), "gloomhaven",
-                       "data", "scenarioPaths.json")) as data_file:
+                       "data", "scenarioPaths.json"), encoding='utf-8') as data_file:
     json_array = json.load(data_file)
     SCENARIOS = [Scenario(**values) for values in json_array]
 
 with open(os.path.join(os.getcwd(), "gloomhaven",
-                       "data", "globalAchievements.json")) as data_file:
+                       "data", "globalAchievements.json"), encoding='utf-8') as data_file:
     json_array = json.load(data_file)
     GLOBAL_ACHIEVEMENTS = [GlobalAchievement(
         **values) for values in json_array]

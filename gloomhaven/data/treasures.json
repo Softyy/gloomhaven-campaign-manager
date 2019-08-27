@@ -1,0 +1,38 @@
+[{
+    "id": 4,
+    "reward": "Gain 15 gold"
+  },
+  {
+    "id": 7,
+    "reward": "Random Side Scenario"
+  },
+  {
+    "id": 28,
+    "reward": "Gain 15 gold"
+  },
+  {
+    "id": 38,
+    "reward": "\"Ring of Skulls\"design(Item 123)"
+  },
+  {
+    "id": 46,
+    "reward": "Suffer 3 damage, gain POISON"
+  },
+  {
+    "id": 50,
+    "reward": "Gain \"Second Skin\" (Item 101)"
+  },
+  {
+    "id": 51,
+    "reward": "Random Side Scenario"
+  },
+  {
+    "id": 65,
+    "reward": "\"Horned Helm\"design(Item 107)"
+  },
+  {
+    "id": 67,
+    "reward": "Gain 10 gold"
+  }
+
+]
