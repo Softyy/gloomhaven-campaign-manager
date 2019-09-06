@@ -6,7 +6,7 @@ from ..models.campaign import Campaign
 
 from .. import app
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID, UNDO_STEP_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID
 
 from .downloader import dict_to_inline_href
 

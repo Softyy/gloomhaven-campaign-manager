@@ -1,22 +1,198 @@
 [{
+    "id": 1,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 3,
+    "reward": "Gain \"Splintmail\" (Item 044)"
+  },
+  {
+    "id": 2,
+    "reward": "Gain \"Tower Shield\" (Item 032)"
+  },
+  {
     "id": 4,
     "reward": "Gain 15 gold"
+  },
+  {
+    "id": 5,
+    "reward": "Gain \"Chainmail\" (Item 023)"
+  },
+  {
+    "id": 6,
+    "reward": "Gain \"Hooked Chain\" (Item 039)"
   },
   {
     "id": 7,
     "reward": "Random Side Scenario"
   },
   {
+    "id": 8,
+    "reward": "Gain 1 (CHECKMARK)"
+  },
+  {
+    "id": 9,
+    "reward": "Gain \"Wave Crest\" (Item 111)"
+  },
+  {
+    "id": 10,
+    "reward": "Gain 10 experience"
+  },
+  {
+    "id": 11,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 12,
+    "reward": "Gain \"Magma Waders\" (Item 099)"
+  },
+  {
+    "id": 13,
+    "reward": "Suffer 5 damage, gain POISON (POISON) and WOUND (WOUND)"
+  },
+  {
+    "id": 14,
+    "reward": "Gain 10 experience"
+  },
+  {
+    "id": 15,
+    "reward": "Gain \"Pendant of Dark Pacts\" (Item 045)"
+  },
+  {
+    "id": 16,
+    "reward": "Gain 10 gold"
+  },
+  {
+    "id": 17,
+    "reward": "Gain 20 gold"
+  },
+  {
+    "id": 18,
+    "reward": "Gain 15 gold"
+  },
+  {
+    "id": 19,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 20,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 21,
+    "reward": "Suffer 5 damage"
+  },
+  {
+    "id": 22,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 23,
+    "reward": "Gain \"Drakescale Armor\" (Item 103)"
+  },
+  {
+    "id": 24,
+    "reward": "Suffer 5 damage"
+  },
+  {
+    "id": 25,
+    "reward": "Gain 25 gold"
+  },
+  {
+    "id": 26,
+    "reward": "Gain 20 gold"
+  },
+  {
+    "id": 27,
+    "reward": "Gain \"Orb of Twilight\" (Item 122)"
+  },
+  {
     "id": 28,
     "reward": "Gain 15 gold"
   },
   {
+    "id": 29,
+    "reward": "Gain \"Endurance Footwraps\" (Item 097)"
+  },
+  {
+    "id": 30,
+    "reward": "Gain 1 (CHECKMARK)"
+  },
+  {
+    "id": 31,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 32,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 33,
+    "reward": "Gain \"Weighted Net\" (Item 019)"
+  },
+  {
+    "id": 34,
+    "reward": "Gain \"Amulet of Life\" (Item 024)"
+  },
+  {
+    "id": 35,
+    "reward": "Gain \"Drakescale Boots\" (Item 098)"
+  },
+  {
+    "id": 36,
+    "reward": "Gain \"Rocket Boots\" design (Item 096)"
+  },
+  {
+    "id": 37,
+    "reward": "Gain 1 (CHECKMARK)"
+  },
+  {
     "id": 38,
-    "reward": "\"Ring of Skulls\"design(Item 123)"
+    "reward": "\"Ring of Skulls\" design (Item 123)"
+  },
+  {
+    "id": 39,
+    "reward": "Suffer 5 damage"
+  },
+  {
+    "id": 40,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 41,
+    "reward": "Gain \"Black Knife\" (Item 053)"
+  },
+  {
+    "id": 42,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 43,
+    "reward": "Suffer 5 damage, gain POISON (POISON) and WOUND (WOUND)"
+  },
+  {
+    "id": 44,
+    "reward": "Random Side Scenario"
+  },
+  {
+    "id": 45,
+    "reward": "Random Item Design"
   },
   {
     "id": 46,
-    "reward": "Suffer 3 damage, gain POISON"
+    "reward": "Suffer 3 damage, gain POISON (POISON)"
+  },
+  {
+    "id": 47,
+    "reward": "Gain \"Steam Armor\" (Item 104)"
+  },
+  {
+    "id": 48,
+    "reward": "Gain 30 gold"
+  },
+  {
+    "id": 49,
+    "reward": "New Scenario: Lost Island (17) (K-17)"
   },
   {
     "id": 50,
@@ -27,12 +203,99 @@
     "reward": "Random Side Scenario"
   },
   {
+    "id": 52,
+    "reward": "Gain \"Heart of the Betrayer\" (Item 131)"
+  },
+  {
+    "id": 53,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 54,
+    "reward": "Gain \"Doomed Compass\" (Item 124)"
+  },
+  {
+    "id": 55,
+    "reward": "Gain 1 (CHECKMARK)"
+  },
+  {
+    "id": 56,
+    "reward": "Gain \"Star Earring\" (Item 069)"
+  },
+  {
+    "id": 57,
+    "reward": "Gain 15 gold"
+  },
+  {
+    "id": 58,
+    "reward": "Gain \"Drakescale Helm\" (Item 108)"
+  },
+  {
+    "id": 59,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 60,
+    "reward": "Gain \"Skullbane Axe\" (Item 113)"
+  },
+  {
+    "id": 61,
+    "reward": "Gain \"Versatile Dagger\" (Item 040)"
+  },
+  {
+    "id": 62,
+    "reward": "Gain \"Helm of the Mountain\" and \"Mountain Hammer\" (Items 110 and 115)"
+  },
+  {
+    "id": 63,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 64,
+    "reward": "Gain 30 gold"
+  },
+  {
     "id": 65,
-    "reward": "\"Horned Helm\"design(Item 107)"
+    "reward": "\"Horned Helm\" design (Item 107)"
+  },
+  {
+    "id": 66,
+    "reward": "Gain \"Volatile Bomb\" (Item 033)"
   },
   {
     "id": 67,
     "reward": "Gain 10 gold"
+  },
+  {
+    "id": 68,
+    "reward": "Gain \"Helix Ring\" (Item 130)"
+  },
+  {
+    "id": 69,
+    "reward": "Gain \"Robes of Summoning\" (Item 100)"
+  },
+  {
+    "id": 70,
+    "reward": "Random Side Scenario"
+  },
+  {
+    "id": 71,
+    "reward": "Random Side Scenario"
+  },
+  {
+    "id": 72,
+    "reward": "\"Fueled Falchion\" design (Item 116)"
+  },
+  {
+    "id": 73,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 74,
+    "reward": "Random Item Design"
+  },
+  {
+    "id": 75,
+    "reward": "MYSTERY TEXT TODO"
   }
-
 ]

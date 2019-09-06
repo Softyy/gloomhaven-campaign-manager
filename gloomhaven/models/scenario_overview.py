@@ -11,4 +11,5 @@ class ScenarioOverview():
         return [self.map_str_to_html(tile) for tile in self.tiles]
 
     def map_str_to_html(self, tile_id: str):
-        return Img(src=f'./assets/scenario_tiles/{tile_id}.png', style={"max-width": "50%"})
+        # Img(src=f'./assets/scenario_tiles/{tile_id}.png', style={"max-width": "50%"})
+        return P(tile_id)
