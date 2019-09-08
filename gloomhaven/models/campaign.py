@@ -52,7 +52,7 @@ class Campaign():
         if scenario.lost_achievements:
             self.party_achievements = [
                 a for a in self.party_achievements if a not in scenario.lost_achievements]
-            self.party_achievements = [
+            self.global_achievements = [
                 a for a in self.global_achievements if a not in scenario.lost_achievements]
 
         # only add new scenarios that haven't already been found.
