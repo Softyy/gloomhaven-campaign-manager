@@ -349,19 +349,43 @@
     "requirements": ["The Power of Enhancement"],
     "party_achievements": ["Through the Ruins"],
     "global_achievements": ["Ancient Technology"],
-    "new_locations": [26]
+    "new_locations": [26],
+    "introduction": "Deciding to brave the dark passages beneath the Gloomhaven sewers, you light a torch and head deeper down.Ruined brickwork eventually gives way to passages made of intricate stone in a state of extreme disrepair.\nYou see an unrecognizable runic language etched into the walls.It would be hard to read even if you knew the language because of all the fractures and missing chunks of stone.\nFollowing the passage, you eventually make your way to a larger room full of ruined machinery you cannot begin to understand. You see a door on the opposite wall, but as you step forward, a clanging sound rings out through the room, almost like an alarm. Then the machinery moves and springs to life, clearly intent on attacking any intruders. That would be you.",
+    "board_square": "C-15",
+    "goal": "Occupy all pressure plates simultaneously",
+    "tiles": ["I1b", "K2b", "D1a", "M1a"],
+    "special_rules": "Add three -1 cards to each character's attack modifier deck as a scenario effect",
+    "event_1": {
+      "text": "You fight your way through the room of machinery and find corridors heading to your left and right.You hear the alarm ringing from both directions.To shut it off, you may have to split up.",
+      "special_rules": "There are a number of pressure plates equal to the number of characters. For two characters, the plates (a) exist.For three characters, the plates (a) and (b) exist.For four characters, the plates (a), (b), and (c) exist."
+    },
+    "conclusion": "With the last switch depressed, the alarm finally, thankfully, subsides.The cannons’ lights go off and their guns point downward, lying dormant.The machinery sputters and dies, the cogs stopping their rotation. Within a matter of seconds, the entire chamber becomes as dead as it was before, leaving you to continue to explore in peace.\nHeading down a narrow passage at the back of the left room, you find the corridor descends into a pool of brackish liquid.You can see a vague light in the distance under the water.A quick swim should take you farther into this underground world.26"
   },
   {
     "id": 24,
     "title": "Echo Chamber",
     "party_achievements": ["The Voice's Command"],
-    "new_locations": [30, 32]
+    "new_locations": [30, 32],
+    "board_square": "C-6",
+    "goal": "Open all doors (fog tiles)",
+    "introduction": "You step into the cave, heeding the call of a voice in your head.It is alluring, with an edge of danger.You could be walking into a trap, a hapless lamb in some sinister game. Reading these fears, the Voice issues you calm assurances.Everything will be fine, just continue descending into the darkness.\nAgainst all reason, you continue.\nIn flashing images and thoughts, the Voice attempts to explain itself.It has been trapped by some powerful force deep in the earth. It needs your help to get out.You express curiosity about who imprisoned it and why, but the Voice falls silent at the thought.\nAnd that silence is troubling, deep in the dark.You are hopelessly lost, until the Voice returns and continues to direct you, with no answers to your questions. The Voice flashes images of the monsters placed to guard it.And it gives you a plan: if you can connect all the rooms in its chamber, its voice will be able to resonate and take form once again, giving it the ability to banish its captors.\nThe Voice tells you you are near.It tells you to prepare yourself",
+    "conclusion": "The last of the fog dissipates and a wind immediately picks up, circulating throughout the chambers of the prison.Its speed grows rapidly, starting as a breeze and escalating to a cyclone in a matter of seconds.\nAnd then you hear the Voice: a sound carried on the wind— a great and terrible sound. There is a powerful cry and all the remaining monsters are destroyed— disintegrated and scattered among the storm.\n\"Thank you, my friends.It is good to finally be rid of those pests.\" The Voice rattles your bones as it speaks. \"And now that that is done, I ask you to aid me again.I am still a prisoner here, trapped in the wind.In order to take a more corporeal form and leave this land, I require my vessels of power returned to me.\"You fall to your knees as the sound subsides, your head ringing from the vibration.The Voice just destroyed your adversaries as if they were nothing.You cannot imagine what it would be capable of if you were to give it more power.\n\"Do not worry, I have no desire to bring calamity to your land.I only wish to be on my way, to be free and unencumbered by this plane.I give you now a vision of where you can find the first vessel.They thought to hide it from me, but I can see it as if it were right in these chambers. Please, bring it to me.\"\nIn a show of goodwill, the Voice directs you back to the entrance of the cave.Far away from its influence, you have a decision to make.You can do its bidding, (32) or you can try to get to the bottom of what exactly the Voice is instead of just meddling with powers you do not understand.(30)",
+    "tiles": ["L2a", "A2b", "G2a", "J1b", "D2b", "B4b"]
   },
   {
     "id": 25,
     "title": "Icecrag Ascent",
     "party_achievements": ["The Drake's Command"],
-    "new_locations": [33, 34]
+    "new_locations": [33, 34],
+    "board_square": "A-5",
+    "tiles": ["K2a", "N1a", "G2a"],
+    "goal": "All characters must escape through the exit (a)",
+    "introduction": "The Copperneck Mountains are not accommodating. Beyond the pass, the weather gets progressively worse the farther north you travel. Your packs are unbearably heavy. The cold is in your bones. And then you start climbing the Icecrag.\nWithout yet having seen any signs of a giant, winged beast, you begin to wonder whether all this trouble is even worth it. Multiple times you contemplate turning back, dreaming of the warm glow of the Sleeping Lion’s hearth.\nBut you begin to hear something strange. Your ears pick up a screeching sound in the wind. It is not large—possibly even just the wind flowing through a small space. But still, it is something. You move forward, and then you see the wolves. They are right upon you, white fur among the flurries of snow.",
+    "special_rules": "Add two -1 cards to each character's attack modifier deck as a scenario effect\nEscape occurs when all characters are either standing on an exit or have become exhausted while standing on an exit . If any character becomes exhausted while not occupying an exit , the scenario is lost.",
+    "event_1": {
+      "text": "You get through the wolves, thankful that the snow didn’ t slow you down too much.You assume the fight is over, but the screeching begins again, this time much closer.You look through the white storm and see red shapes scurrying toward you."
+    },
+    "conclusion": "Everything within you wants to stop—to fall over and rest in the snow. But you know you wouldn’t get up. You know you would get torn to pieces by giant, red claws. So you press forward, beyond all reason. Until, finally, the drakes stop pursuing and the mountain summit is in sight.\nThe wind calms as you approach the peak. It is a nice change from the torrent of biting pain that came before. The air is thin, but you are above the clouds now and so the weather is relatively peaceful. It makes it very easy to see the giant, winged lizard perched atop a jagged boulder.\n\"Welcome to my mountain, intrepid adventurers.\" A gravelly voice booms forth from the creature, surprising you with its eloquence.\n\"I hate to back you into a corner, but now that you have come to me, face-to-face, your options are unfortunately limited. I am not particularly hungry at the moment, so I could be convinced to let you live, if you agree to help me in a small matter.\n\"A group of Savvas subdued me in my sleep and removed one of my flame glands, presumably to study. I cannot let this insult go unpunished and would greatly appreciate you taking it back from their city, killing as many of them as you can in the process.\" The drake clacks its claws against its stone perch in anger. (33)\n\"Or, if you wish to be cliché,\" the creature says with a sigh, \"you could simply attack me. Slay the dragon, save the princess, and all that.\"\n\"Except I have no princess, and I’m not a dragon—just a drake who has lived a long time and does not wish to end his life today. So if you do attack me, I will fight back, and you will most assuredly die.” (34)"
   },
   {
     "id": 26,
@@ -369,21 +393,44 @@
     "requirements": ["Water-Breathing"],
     "alt_requirements": ["Through the Ruins"],
     "party_achievements": ["Following Clues"],
-    "new_locations": [22]
+    "new_locations": [22],
+    "board_square": "D-15",
+    "goal": "Cleanse all water pumps",
+    "introduction": "The water grows dark, black as a cloudy night sky. You cannot see your hands paddling in front of your face, but you press on. Before too long, you spot a light in the distance. It takes all the effort you have left, but eventually the light grows bigger and you emerge from a pool of fetid water, grateful that you can breathe freely once again.\nThe relief, however, is short-lived. The room is swarming with menacing green masses of ooze and undead. You flop out onto dry land and try to catch your breath, readying your weapons for another battle.",
+    "special_rules": "Add three CURSE (CURSE) cards to each character's attack modifier deck as a scenario effect.",
+    "event_1": {
+      "text": "Following the signs of corruption, you find your way into the final room of the chamber, hoping to finish off the rest of your adversaries quickly. Instead, horror invades your mind as you view the scene before you.\nFour water pipes stand vertically in the back of the room, clear conduits for the pumping of the city’s water. Attached to the pipes, however, are writhing black masses, poisoning the water running through. When you enter, some of the black mass drips down from the pipes, coalescing into the forms of small, bulbous imps with mouths full of teeth.\nThe horde of demons and undead isn’t exactly a welcome sight, either.",
+      "special_rules": "A number of water pumps equal to the number of characters are present and must be cleansed to complete the scenario. Any character adjacent to a water pump may forgo a bottom action (discarding one card instead) to cleanse the pump. For two characters, pumps are located in water hexes (a). For three characters, pumps are located in water hexes (a) and (b). For four characters, pumps are located in water hexes (a), (b), and (c). At the end of each round, all pumps that have not been cleansed summon one normal Black Imp."
+    },
+    "conclusion": "By the time the fight is over, the walls and floor are a mess of black ooze. None of it is pulsating anymore, though, which is a step in the right direction. A simple mop can clean the remnants, now that the dark presence has been removed.\nYou approach the back wall and bemusedly wipe away some of the grime with your finger. Most of it comes off easily, but a chalky black streak remains. Curious, you take your sleeve and begin wiping the wall more vigorously, quickly revealing some sort of runic language. With enough cleaning, you find lettering covering the entire back wall.\nThe letters are unrecognizable, but you jot them down and head back to town, bringing the writings to a language expert at the University.\n\"It’s part of a ritual,\" says a bespectacled Quatryl, staring down at your crude writing. “I am not myself entirely familiar with the specifics, but it seems to be a ritual to ‘welspar’...err, corrupt.\n“I believe such corruption would require the use of a conduit.” The Quatryl peers even more intently at the writings. “Ah, here! Something referred to as ‘The Artifact,’ housed at the Temple of Elements\nThe Quatryl rushes over to a bookcase overflowing with texts, “Ah, interesting! I’ve heard of that before.” He disappears behind a large stack of tomes.\n“Yes! The Temple of the Elements.” His head pops out above the books. “The Temple of he Elements, said to house the Vessel of the Elements, a powerful ancient artifact capable of giving shape and power to the elemental residues around us.\n“The book says the temple isn’t even that far from here—somewhere around the fork in the Serpent’s Kiss River. If you’re looking to get the bottom of the corruption, I’d start there.” (22)",
+    "rewards": ["10 gold each", "+1 reputation", "+2 prosperity"],
+    "tiles": ["M1a", "J1a", "C1a", "L2a"]
   },
   {
     "id": 27,
     "title": "Ruinous Rift",
     "requirements": ["Stonebreaker's Censor"],
     "anti_requirements": ["Artifact:Lost"],
-    "global_achievements": ["The Rift Neutralized"]
+    "global_achievements": ["The Rift Neutralized"],
+    "board_square": "E-6",
+    "goal": "Protect Hail (a) for ten rounds",
+    "introduction": "On the way back to the Ruinous Crypt, Hail seems almost happy as she trudges through the mud with you, eager to help fight back demons and undead.\n“It’s been so long since I’ve been outside of Gloomhaven,” she says, swaying the elemental censer back and forth as she walks. “The city is necessary for my studies, but it feels good to take a small break and travel this plane again. And with so much less danger this time, as well.”\nYou look at the Aesther questioningly. “Sure, cultists and demons aren’t exactly friendly encounters, but last time I traveled these lands...well, that is something I swore I would never speak of.”\nHail grows silent until you arrive at the crypt. Opening the ancient doors, you half expect the place to be teeming with cultists and demons once again, but the stone halls are as silent and barren as death. You move towards the main chamber where you find the giant rift, hovering above a demonic altar.\n“Well, you certainly weren’t kidding,” Hail says. “This thing is a beauty! The girth and stability—quite impressive!” Hail walks around the perimeter of the altar, throwing sand in the air and watching it fall.\n“I’m pretty sure I can close it, thanks to old Stonebreaker’s censer here. I can’t imagine the forces on the other side of this rift are going to be all too happy about it, though.”\nHail raises the censer above her head with one arm and plunges the other elbow-deep into the rift. “Gather round, ladies and gentlemen! This is going to be one killer party.”",
+    "special_rules": "Hail (a), represented by a numbered token, has 4+(2xL) hit points. She is an ally to you and an enemy to all monster types. She has an initiative of 99 for the purpose of monster focusing. If Hail is killed, the scenario is lost.\nAt the end of the first round, one demon spawns on hex (b). At the end of the second round, one demon spawns on hex (c). At the end of each round after the second, two different demons will spawn at (d) and (e)at the end of every odd round, and at (b) and (c) at the end of every even round.\nThe type of demon that spawns cycles in the order of Night Demon, Wind Demon, Frost Demon, Sun Demon, Earth Demon, Flame Demon and then back to Night Demon. All spawns are normal for two characters. Wind, Sun and Flame Demons are elite for three characters. All spawns are elite for four characters.",
+    "conclusion": "Hail screams out with hair-raising intensity. You look to her, afraid that more demons got past you and are attacking her. Instead, you see her pulling her hand back out of the rift. Her forearm is withered and smoking.\nAs her gnarled fingers clear the chaotic energies of the rift, it wavers and begins to shrink. A great wind picks up in the chamber and the demons fighting with you show fear for the first time. Instead of digging their claws into you, they grab at the stone floor, desperate to stop the pull of the rift.\nTheir efforts are futile, however. Every last one is sucked back into their own plane. The tear shrinks to one brilliant point and disappears.\nHail collapses, and you run to her side. “Oh, don’t mind me,” she coughs. “I’ll be fine. This old body has seen far worse.”\nShe breaks into a fit of coughing, that soon turns into laughter. “That really was something, though, wasn’t it? If there’s one thing I can depend on you for, it’s a challenge.\n“Here, help me up. I need to get back to Gloomhaven immediately. I have many new thoughts for my research. Feel free to come by any time and I’ll figure out some way to properly thank you.”",
+    "rewards": ["+1 prosperity", "100 gold each (This money must immediately be spent on enhancements)"],
+    "tiles": ["M1a"]
   },
   {
     "id": 28,
     "title": "Outer Ritual Chamber",
     "requirements": ["Dark Bounty"],
     "party_achievements": ["An Invitation"],
-    "new_locations": [29]
+    "new_locations": [29],
+    "board_square": "C-4",
+    "goal": "Kill all enemies",
+    "introduction": "As you enter the crypt, a familiar face greets you at the bottom of the stairs. He grins from ear to ear. “Ah, so you have come. Again, we thank you graciously for your help in taking out that pesky necromancer. Come, let me make introductions.”\nThe hooded figure leads you through a stone door and into a large room. He points at a black, flaming rift in space.\n“This,” he says, failing to mask his giddiness. “Is our master: the Gloom. It wanted to thank you personally for murdering so many of our brothers and setting back our plans.”\nOut of the rift, a group of horrendous, bloated corpses appears and shambles toward you.\n“You are worthless fodder!” The figure suddenly screams in exhilaration. “Did you think you could come back into our graces so easily? You are here to die! Then you can join our cause as a corpse, just like the rest of these unworthy fools!”",
+    "special_rules": "All Living Corpses are two levels higher than the scenario level, up to a maximum of 7",
+    "conclusion": "You drop your weapons, exhausted. Thankfully, no more undead seem to be coming through the rift, but still, its existence and the presence of this Gloom is troubling.\n“You have done well.” A cold, low voice penetrates the silence. It seems to be coming from the darkness in front of you. “My minions may not be able to forgive. But I can.\n“Come. Come to me. Step into my realm. Embrace the inevitable.”\nThe rift stands before you. You can see this through to the end, (29) or you can turn around and leave this place, ignoring the call of the Gloom."
   },
   {
     "id": 29,
