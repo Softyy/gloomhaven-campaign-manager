@@ -5,7 +5,7 @@ from .scenario_event import ScenarioEvent
 
 class Scenario():
 
-    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = "", goal: str = "Kill all enemies", board_square: str = "A-1", tiles: [str] = ["A1a", "A2b"], event_1: ScenarioEvent = {}, rewards: [str] = [], special_rules: str = "", event_2: ScenarioEvent = {}, event_3: ScenarioEvent = {}):
+    def __init__(self, id, title, requirements=[], anti_requirements=[], party_achievements=[], global_achievements=[], new_locations=[], subset_of_locations=False, conditional_achievements=None, alt_requirements=[], lost_achievements=[], personal_requirements=None, scenario_type: str = 'main', introduction: str = "", treasures: [int] = [], conclusion: str = "", goal: str = "Kill all enemies", board_square: str = "A-1", tiles: [str] = ["A1a", "A2b"], event_1: ScenarioEvent = {}, rewards: [str] = [], special_rules: str = "", event_2: ScenarioEvent = {}, event_3: ScenarioEvent = {}, boss_special_1: str = "", boss_special_2: str = ""):
         self.id = id
         self.title = title
         self.requirements = requirements
@@ -30,6 +30,8 @@ class Scenario():
         self.event_3 = ScenarioEvent(**event_3)
         self.rewards = rewards
         self.special_rules = special_rules
+        self.boss_special_1 = boss_special_1
+        self.boss_special_2 = boss_special_2
 
     def requirements_to_html(self):
         requirements = self.text_and_cond_to_html(
