@@ -1,7 +1,7 @@
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 
-from ..consts import BANNERS_ID, MODAL_ID, CLOSE_MODAL_ID, MODAL_BODY_ID, MODAL_HEADER_ID, MODAL_FOOTER_ID, COMPLETE_SCENARIO_ID, FAIL_SCENARIO_ID
+from ..consts import BANNERS_ID, MODAL_ID, CLOSE_MODAL_ID, MODAL_BODY_ID, MODAL_HEADER_ID, MODAL_FOOTER_ID, COMPLETE_SCENARIO_ID, FAIL_SCENARIO_ID, PROGRESS_SCENARIO_ID, DEFAULT_PROGRESS_TEXT
 
 
 def render():
@@ -15,6 +15,8 @@ def render():
                 html.Div([
                     dbc.Button("Fail",
                                id=FAIL_SCENARIO_ID, color="danger"),
+                    dbc.Button(DEFAULT_PROGRESS_TEXT % 1, id=PROGRESS_SCENARIO_ID,
+                               color="secondary"),
                     dbc.Button("Complete",
                                id=COMPLETE_SCENARIO_ID, color="success")
                 ])],

@@ -4,6 +4,7 @@ from dash_html_components import Img, P, H6, Div
 from ..models.scenario import Scenario
 from ..models.achievement import GlobalAchievement
 from ..models.scenario_overview import ScenarioOverview
+from ..models.scenario_event import ScenarioEvent
 
 from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
@@ -173,7 +174,7 @@ class Campaign():
         return [P(a) for a in self.party_achievements]
 
     @classmethod
-    def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, show_requirements_not_met=False, progress_markers=[]):
+    def create_modal_scenario_text_body(cls, scenario_id: int, show_conclusion=False, show_requirements_not_met=False, progress_marker: int = 0):
         scenario = cls.get_scenario(scenario_id)
         scenario_overview = ScenarioOverview(scenario)
 
@@ -202,31 +203,17 @@ class Campaign():
 
         midgame_section = []
 
-        if 1 in progress_markers or (show_conclusion and scenario.event_1.exists()):
-            midgame_section += [Div(
-                [H6(1, style={"position": "absolute", "font-size": "x-large", "color": "#861c21", "margin": "5px"}),
-                 Img(src="./assets/rule.png",
-                     className="d-flex", style={"max-width": "400px"})],
-                className="d-flex justify-content-center align-items-center")]
-            midgame_section += cls.text_to_html(scenario.event_1.text)
+        if 1 <= progress_marker or (show_conclusion and scenario.event_1.exists()):
+            midgame_section = cls.event_to_html(
+                midgame_section, 1, scenario.event_1)
 
-            if scenario.event_1.special_rules != "":
-                midgame_section += [H6("Special Rules",
-                                       style={"border-bottom": "1px solid black"})]
-                midgame_section += cls.text_to_html(
-                    scenario.event_1.special_rules)
+        if 2 <= progress_marker or (show_conclusion and scenario.event_2.exists()):
+            midgame_section = cls.event_to_html(
+                midgame_section, 2, scenario.event_2)
 
-            if scenario.event_1.boss_special_1 != "":
-                midgame_section += [H6("Boss Special 1",
-                                       style={"border-bottom": "1px solid black"})]
-                midgame_section += cls.text_to_html(
-                    scenario.event_1.boss_special_1)
-
-            if scenario.event_1.boss_special_2 != "":
-                midgame_section += [H6("Boss Special 2",
-                                       style={"border-bottom": "1px solid black"})]
-                midgame_section += cls.text_to_html(
-                    scenario.event_1.boss_special_2)
+        if 3 <= progress_marker or (show_conclusion and scenario.event_3.exists()):
+            midgame_section = cls.event_to_html(
+                midgame_section, 3, scenario.event_3)
 
         conclusion_section = [
             H6("Conclusion", style={"border-bottom": "1px solid black"})]
@@ -237,3 +224,31 @@ class Campaign():
     @staticmethod
     def text_to_html(text: str):
         return [P(paragraph) for paragraph in text.split('\n')]
+
+    @classmethod
+    def event_to_html(cls, midgame_section, number: int, event: ScenarioEvent):
+        midgame_section += [Div(
+            [H6(number, style={"position": "absolute", "font-size": "x-large", "color": "#861c21", "margin": "5px"}),
+             Img(src="./assets/rule.png",
+                     className="d-flex", style={"max-width": "400px"})],
+            className="d-flex justify-content-center align-items-center")]
+        midgame_section += cls.text_to_html(event.text)
+
+        if event.special_rules != "":
+            midgame_section += [H6("Special Rules",
+                                   style={"border-bottom": "1px solid black"})]
+            midgame_section += cls.text_to_html(
+                event.special_rules)
+
+        if event.boss_special_1 != "":
+            midgame_section += [H6("Boss Special 1",
+                                   style={"border-bottom": "1px solid black"})]
+            midgame_section += cls.text_to_html(
+                event.boss_special_1)
+
+        if event.boss_special_2 != "":
+            midgame_section += [H6("Boss Special 2",
+                                   style={"border-bottom": "1px solid black"})]
+            midgame_section += cls.text_to_html(
+                event.boss_special_2)
+        return midgame_section

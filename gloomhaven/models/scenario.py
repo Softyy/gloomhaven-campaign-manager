@@ -48,3 +48,13 @@ class Scenario():
 
     def __repr__(self):
         return f'{self.id}-{self.title}'
+
+    def get_next_event(self, id: int):
+        if(id == 0):
+            return self.event_1
+        elif (id == 1):
+            return self.event_2
+        elif (id == 2):
+            return self.event_3
+        elif (id == 3):
+            return ScenarioEvent()

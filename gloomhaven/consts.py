@@ -29,9 +29,12 @@ CAMPAIGN_MODAL_BODY_ID = 'campaign-modal-body'
 CAMPAIGN_MODAL_FOOTER_ID = 'campaign-modal-footer'
 
 COMPLETE_SCENARIO_ID = 'scenario-completed'
+PROGRESS_SCENARIO_ID = 'scenario-progression'
 FAIL_SCENARIO_ID = 'scenario-failed'
 TOAST_ACHIEVEMENT_ID = 'toast-achievements'
 TOAST_NEW_LOCATION_ID = 'toast-new-locations'
+
+DEFAULT_PROGRESS_TEXT = 'Open door %s'
 
 PROSPERITY_ID = 'prosperity-counter'
 PARTY_ACHIEVEMENT_LIST_ID = 'party-achievements'
