@@ -430,40 +430,80 @@
     "goal": "Kill all enemies",
     "introduction": "As you enter the crypt, a familiar face greets you at the bottom of the stairs. He grins from ear to ear. “Ah, so you have come. Again, we thank you graciously for your help in taking out that pesky necromancer. Come, let me make introductions.”\nThe hooded figure leads you through a stone door and into a large room. He points at a black, flaming rift in space.\n“This,” he says, failing to mask his giddiness. “Is our master: the Gloom. It wanted to thank you personally for murdering so many of our brothers and setting back our plans.”\nOut of the rift, a group of horrendous, bloated corpses appears and shambles toward you.\n“You are worthless fodder!” The figure suddenly screams in exhilaration. “Did you think you could come back into our graces so easily? You are here to die! Then you can join our cause as a corpse, just like the rest of these unworthy fools!”",
     "special_rules": "All Living Corpses are two levels higher than the scenario level, up to a maximum of 7",
-    "conclusion": "You drop your weapons, exhausted. Thankfully, no more undead seem to be coming through the rift, but still, its existence and the presence of this Gloom is troubling.\n“You have done well.” A cold, low voice penetrates the silence. It seems to be coming from the darkness in front of you. “My minions may not be able to forgive. But I can.\n“Come. Come to me. Step into my realm. Embrace the inevitable.”\nThe rift stands before you. You can see this through to the end, (29) or you can turn around and leave this place, ignoring the call of the Gloom."
+    "conclusion": "You drop your weapons, exhausted. Thankfully, no more undead seem to be coming through the rift, but still, its existence and the presence of this Gloom is troubling.\n“You have done well.” A cold, low voice penetrates the silence. It seems to be coming from the darkness in front of you. “My minions may not be able to forgive. But I can.\n“Come. Come to me. Step into my realm. Embrace the inevitable.”\nThe rift stands before you. You can see this through to the end, (29) or you can turn around and leave this place, ignoring the call of the Gloom.",
+    "tiles": ["M1a", "C1a", "C2b"]
   },
   {
     "id": 29,
     "title": "Sanctuary of Gloom",
     "requirements": ["An Invitation"],
-    "global_achievements": ["The Edge of Darkness"]
+    "global_achievements": ["The Edge of Darkness"],
+    "board_square": "E-3",
+    "goal": "Kill all enemies",
+    "introduction": "Within the cultist sanctum, you step into the black rift. After a blinding pain and flashing images of clawed demons and flayed corpses, you end up in a place much like the one you left. A large stone room is visible before you.\n“Tricked again.” The low voice returns to you. “Truly amazing that creatures as stupid as yourselves have caused me so much trouble. No matter. You will rot here, completely cut off from your home.” In an instant of dread, you turn to see the rift that brought you here shrink and close.\n“There will be no last stand. You will simply waste away. You will die without valor in a foreign place and there is no recourse. I leave you now forever. Good-bye.”",
+    "special_rules": "Add three -1 cards to each character's attack modifier deck as a scenario effect\nDoors (a) are locked and open when they are destroyed.They have 4 + L hit points.",
+    "conclusion": "You bang on the walls, desperately hoping for something to continue fighting against in this exile. You grow tired. Your vision darkens.\nIn your next breath, you find yourself lying in the grass outside of the cult’s hideout.\n“Know that I have spared you.” The low voice returns. “Your persistence intrigues me. I invite you to break yourself against me. It will be more entertaining than the last time I brought gloom to this world.”\nYou bolt upright and rush back into the crypt. Dead bodies of the cultists litter the floor.\n“I am not here anymore. These shells have served their purpose. My roots are now deep and you will soon encounter my endless power once more. I look forward to the day.”",
+    "rewards": ["15 experience each"],
+    "tiles": ["E1a", "D1a", "D2a", "J1a"]
   },
   {
     "id": 30,
     "title": "Shrine of the Depths",
     "requirements": ["The Voice's Command"],
     "party_achievements": ["The Scepter and the Voice"],
-    "new_locations": [42]
+    "new_locations": [42],
+    "board_square": "N-15",
+    "goal": "Loot the treasure tile",
+    "introduction": "“So, there’s a disembodied voice somewhere deep in the Copperneck Mountains, and it wants you to collect vessels that will help it escape its confinement?” A bookish Quatryl at the University adjusts his glasses to look up at you. “And you want to know exactly what this voice is?”\nHe laughs nervously. “Heh, okay, well, I’ll do what I can. I’ll start with rituals that could separate a voice from its host...” The Quatryl sort of drifts off in the middle of his sentence and wanders over to some bookshelves, where he leafs through various texts.\nYou decide to head to the market for a few hours. When you return, the Quatryl rushes up with excitement.\n“I’ve found it!” He waves a book in your face. “I hit a number of dead ends until I realized the voice wasn’t separated, it was just the only thing that can get through the barrier created to imprison it, which implies that the barrier itself was extra-planar, most likely created by the Aesthers ages ago.\n“So I did some digging through all the texts we have on Aesther rituals—which isn’t much, they’re very reticent about such things—but luckily I found this book. It is a specific recounting of the binding of a demon in the Copperneck region you referred to. Apparently the creature was so strong, the Aesthers enlisted the help of the Savvas and the Harrowers, too. They claim it was powerful enough to lay waste to the entire continent.\n“If it’s asking you to help free it, I’d strongly recommend against it. The accuracy of the text is admittedly a little questionable, but whatever this voice is, it was bound for a reason.”\nThe Quatryl finally stops waving the book around and begins to flip through the pages. “In fact, if you can hear the voice from outside the cave, and it has such a strong influence over you, it sounds as if the barrier is weakening, as the author warns.\n“Apparently there is a scepter that could be used to strengthen the binding ritual, but the author says it has been placed on an island along the south shore for safekeeping. There’s a simple incantation detailed in the text to open the door to the shrine.”\nTwo days later, you stand before the ruined structure, which now sits half-sunk in the water-logged earth. You speak a few foreign words and the door creaks open. You get the strong sense that the door is not the only thing between you and this scepter.",
+    "tiles": ["E1a", "L1a", "N1b"],
+    "special_rules": "The treasure tile can only be looted using a Loot action. It cannot be looted by normal end-of-turn looting.",
+    "conclusion": "You grab hold of the scepter and the entire building shudders violently. A dark energy bursts forth, piercing through the chests of the monsters still attacking you. They all fall over dead and the shuddering stops.\nAs you get back to your feet, however, a sharp pain suddenly pierces your skull.\n“You have been misled,” the Voice speaks into your mind. “Do not bring that scepter to me! If you free me, I guarantee no harm will come to you. But I cannot say the same if you approach with the scepter. Whatever you think you are doing, you are wrong.”\nAs quickly as it came, the pain stops. You tighten your grip on the scepter and race out of the shrine, eager to bring it to the Echo Chamber and silence the Voice. (42)",
+    "rewards": ["10 gold each"]
   },
   {
     "id": 31,
     "title": "Plane of Night",
     "requirements": ["The Power of Enhancement", "Artifact: Recovered"],
     "global_achievements": ["Artifact: Cleansed"],
-    "new_locations": [37, 38, 39, 43]
+    "new_locations": [37, 38, 39, 43],
+    "board_square": "A-16",
+    "goal": "Destroy the rock column (a)",
+    "introduction": "Hail rubs her hands in excitement.\n“On this day, I can tell you that, for the first time, I do not regret turning you inside-out when we met,” she says matter-of-factly. “The Vessel of the Elements! And you say it was under my nose the whole time? Amazing how some things get forgotten so easily.”\nShe reaches out to touch it, but quickly recoils her hand. “Oh, so this is why you brought it to me? And here I thought it was a token of friendship.” She frowns.\n“That,” she says, pointing at the artifact, “is a clear case of bad gifting. You’re going to have to clean this thing out before I can accept it.\n“The artifact has been attuned to the Plane of Night, capable only of corrupting and destroying everything it comes in contact with. You could wreak a lot of havoc with this, but with such strong attunement, there’s noway to control its power. You’ll need to break the connection to balance it out.”\nYou stare at Hail blankly. “Oh, what, do I have to do everything?” she asks incredulously. “Okay, look, I’m not going to go in there and fix it, but I suppose I can transport your essences through to the other side so that you can sever the shadow link yourselves.”\nHail begins to move her hands fluidly back and forth. Occasionally a hand disappears down to her wrist, only to re-emerge, clutching colorful magics, which she begins to scatter over you.\n“So it’s all very simple. Soon you will find yourselves in the Plane of Night. Just look around for a giant black pillar extending infinitely into the sky, and then destroy it. Once you do that, I’ll bring you back here.”\nBefore you even have time to object, your vision goes dark. At first you feel as though you are falling, but then realize you are standing on solid ground. Your vision adjusts, and you begin to see features in your surroundings. You are in a cave, covered in a slick, black slime. And there are demons—so many demons",
+    "special_rules": "Add three CURSE (CURSE) cards to each character’s attack modifier deck as a scenario effect. At the start of every round, move the Dark elemental token to the Strong column and move the Light elemental token to the Inert column.",
+    "event_1": {
+      "text": "Just as you are beginning to think that Hail sent you to the wrong place, you gratefully see the outline of a tower in the distance. The thing is massive, with twisting ropes of darkness weaving in and out of one another, reaching up through an opening in the cavern ceiling above you.",
+      "special_rules": "The rock column (a) has (8+L)xC hit points.\nStarting from the current round, at the end of every odd round, one normal Night Demon for two or three characters, or one elite Night Demon for four characters will spawn in hex (b). At the end of every even round, one normal Night Demon for two characters, or one elite Night Demon for three or four characters will spawn in hex (c)."
+    },
+    "conclusion": "With one last swing, the tower of black rope severs. The strands writhe and whip around, quickly ascending out of the cave, as if falling away up into the sky. The ground shudders. Cracks form beneath your feet, and there is a loud grating noise as the whole chamber shifts and begins to crash downward.\nAs true panic sets in, you are whisked back into the Crooked Bone with Hail standing in front of you.\n“Oh my, that connection receded much more quickly than I had anticipated. You’re quite lucky I was able to pull you out of there before the whole place collapsed in on itself.\n“The attunement has certainly been severed, though. The artifact is perfectly balanced.” Hail picks up the vessel with her hands and studies it closely. “A true marvel.”\n“All fun aside, though, if you’re looking for the entity who could have attuned it in such a way, I may have something for you there.” She sets down the vessel and pulls a map out of the air, laying it on a rickety table. “After the connection to the Plane of Night was severed, I briefly felt a tug on the artifact from three different locations. It was being used as a power source, but with the source depleted, the tugging stopped almost immediately.\n“I was still able to pinpoint the locations,” Hail states triumphantly, marking the map. “Here, out in the Misty Sea, deep under the surface. (43) (37) Another one in the dark parts of the Dagger Forest. (38) And finally one high atop the peaks of the Coppernecks.” (39)\nHail straightens up and reaches for the artifact. “I’ll keep this safe here.”\nYou look at her disapprovingly. “Okay, fine,” she says. “You can hold on to it. Probably safer with you anyway. Just promise you’ll let me take a closer look at it some time.”",
+    "tiles": ["G2a", "J1b", "L2a"]
   },
   {
     "id": 32,
     "title": "Decrepit Wood",
     "requirements": ["The Voice's Command"],
-    "new_locations": [33, 40]
+    "new_locations": [33, 40],
+    "board_square": "L-11",
+    "goal": "Revel the G tile, kill all revealed enemies, and loot the treasure tile",
+    "introduction": "The thick wood recedes as you close in on the location of the first vessel of the Voice. Through the trees, you see a decaying wooden structure with collapsed walls and a rot that seems to be seeping into the surrounding area. The trees and plants around the building are equally forlorn and decayed.\nThe Voice claims the place is home to a sect of militaristic Harrowers, highly aggressive and territorial. No one would dare get close to this area unless they had an extreme death wish.\nSo there’s nothing left to do but kick down the door and find the vessel somewhere in the Harrowers’ coffers. Alternately, you’ve scouted a side entrance that could let you avoid some confrontation, but may lead to other dangers.",
+    "tiles": ["H2b", "I1a", "L1b", "A4a", "G2b"],
+    "conclusion": "The Harrowers proved quite difficult to take down, but in the end they fell just like any other foe. Feeling the rot of the place seeping into your bones, you hurriedly ransack the dwelling and locate the small earthen pot shown to you by the Voice.\nWhen you pick it up, the Voice fills your head. “Good! Yes, excellent! The infesters were but one guardian employed to block my passage. I give you now the second location. (33) Please bring the vessels back to me. I will reward you greatly.” (40)"
   },
   {
     "id": 33,
     "title": "Savvas Armory",
     "requirements": ["The Voice's Command"],
     "alt_requirements": ["The Drake's Command"],
-    "party_achievements": ["The Voice's Treasure", "The Drake's Treasure"]
+    "party_achievements": ["The Voice's Treasure", "The Drake's Treasure"],
+    "board_square": "A-7",
+    "goal": "Loot all treasure tiles, then all characters must escape through the exit (a)",
+    "introduction": "Commanded by a powerful creature to retrieve a priceless treasure, you now plot how to infiltrate a Savvas city and break into an armory deep inside their mountain.\n“Assaulting the Savvas directly is hopeless,” the creature told you. “But there is a passage on the north side of their city that leads directly to their vault.”\nIt’s a long, harrowing journey, navigating to the far side of the mountain, but eventually you find the hidden entrance.\n“You will need to act quickly,” the creature instructed. “As soon as you enter, the Savvas will sound an alarm. You’ll need to get what you came for and get out before you are overwhelmed by reinforcements.”\nYou reach a simple wooden door at the end of the tunnel. Carefully trying the door, it doesn’t budge. It’s rather flimsy, so you should be able to break it down easily, but you’ll have to abandon a stealthy approach.",
+    "special_rules": "Door (b) is locked and opens when it is destroyed. It has 4+L hit points.\nDoor (1) is locked and opens when all characters simultaneously occupy one of the pressure plates (c) at the end of a turn.",
+    "event_1": {
+      "text": "You hear the alarm ringing clearly in the distance. You’ve kicked over a hornets’ nest and it’s just a matter of time before you are swarmed. You enter the inner chamber and scan the room. There’s a lot of treasure here. Best just to grab it all.",
+      "special_rules": "At the end of the current round, one normal Savvas Lavaflow for two characters or one elite Savvas Lavaflow for three or four characters will spawn in hex (a). At the end of the round in which the last treasure tile is looted, one normal Savvas Icestorm for two or three characters or one elite Savvas Icestorm for four characters will spawn in hex (a). Escape occurs when all characters are either standing on an exit (a) or have become exhausted while standing on an exit (a). If any character becomes exhausted while not occupying an exit (a), the scenario is lost"
+    },
+    "conclusion": "You round the corner just as a ball of fire flies in your direction. It explodes on the far wall and collapses the tunnel behind you. You break into a full sprint and, within minutes, emerge from the mountain and continue speeding into the surrounding foothills. With a safe distance between you and your pursuers, you finally collapse to the ground and rest. After a while, it becomes clear that no Savvas are chasing you, so you get up and continue your quest with the treasure in hand. (40)",
+    "tiles": ["A3b", "A4b", "C2b", "I1b", "M1a"]
   },
   {
     "id": 34,
@@ -471,7 +511,15 @@
     "requirements": ["The Drake's Command"],
     "anti_requirements": ["The Drake Aided"],
     "lost_achievements": ["The Drake's Command"],
-    "global_achievements": ["The Drake Slain"]
+    "global_achievements": ["The Drake Slain"],
+    "board_square": "A-4",
+    "goal": "Kill the Elder Drake",
+    "introduction": "Standing before the great, proud drake, you see nothing to discuss with the monster. If it wants your help, it is certainly for a nefarious purpose. The drakes you’ve met previously certainly haven’t been very kind. You ready your weapons with determination.\n“So, it’s to be that way is it?” The drake sighs. “Well, I suppose I could eat, if you insist.” It takes in a deep breath.",
+    "special_rules": "The Elder Drake occupies all three hexes of the obstacle it is on. If a figure can target any one of these hexes, they can target the Elder Drake, and the Elder Drake can use any of its hexes to determine what it can target.\nThe Elder Drake cannot be forced to move or change positions in any way. The huge boulder obstacles cannot be destroyed.",
+    "boss_special_2": "The Elder Drake summons two Zephyrs, represented by numbered tokens, then flies to the next perch of boulders in the order of (a), (b), (c), and then back to (a).\nZephyrs cannot be damaged in any way. They perform “Move 2, Attack C” immediately before the Elder Drake’s turn every round.",
+    "conclusion": "With one final blood-curdling screech, the giant drake falls off its perch and crashes to the snowy ground. It appears to still be alive, but its breaths are weak and shallow.\n“Bloodthirsty and obtuse. I don’t know why I should have expected more,” the drake whispers. “Congratulations on your stunning success. I’m sure you will be heralded as heroes upon your triumphant return. Adorned in crowns of gold and cloaks of silk. Riches will be laden upon you and five thousand...”\nThe drake’s whispers trail off and the breathing stops. Needless to say, the drake’s sarcastic predictions do not come to pass. You report your deeds to the Gloomhaven authorities and receive a modest reward to add to the modest amount of treasure you found on the scorched summit.",
+    "rewards": ["20 gold each", "+2 reputation", "+1 prosperity"],
+    "tiles": ["L2a", "L3b"]
   },
   {
     "id": 35,
