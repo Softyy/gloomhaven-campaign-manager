@@ -162,7 +162,12 @@
     "goal": "Kill the Captain of the Guard",
     "introduction": "Jekserah's plan is troubling, but it is certainly sound in some dark, twisted sense. You've seen the guards on the wall. They can barely fight back the Vermlings, and their taxation is strangling the town and your own pocket.\nWith an army of undead, the merchants can govern the city into an age of prosperity and keep it safe from the forces outside the walls.\n\"So are you ready to take the fate of this city into your own hands, mercenaries?\"\nYou nod in assent. \"My army is ready. We march for the Ghost Fortress!\" A commotion in the foyer startles you away from Jekserah's rally. Rushing into the room, you see a troop of solider standing over the bodies of Jekserah's Inox guards.\n\"This ends now!\" Argeise points a crossbow at you. \"I tried to warn you. Do you have any idea what you are unleashing on the city?\"\n\"It's too late,\" Jekserah spits from behind you, \"They can't stop us! My army has already dispersed into the city. It will only grow with every guard who falls.\"\nJekserah turns to you. \"Head to the Ghost Fortress. If the Captain of the Guard falls, any resistance to our new order will fall soon after.\"",
     "special_rules": "All Living Bones and Living Corpses are allies to you and enemies to all other monster types.",
-    "rewards": ["15 gold each", "-2 reputation", "+2 prosperity", "\"Skullbane Axe\" design (Item 113)"],
+    "rewards": [
+      "15 gold each",
+      "-2 reputation",
+      "+2 prosperity",
+      "\"Skullbane Axe\" design (Item 113)"
+    ],
     "event_1": {
       "text": "With the guards' bodies in your wake stirring and rising as the undead, you knock through the fortress door. \"Today we stand against the darkness!\" The Captain of the Guard bellow at you, surrounded by soldiers. \"To me! I will not let the city fall to this scum!\""
     },
@@ -225,36 +230,101 @@
   {
     "id": 16,
     "title": "Mountain Pass",
-    "new_locations": [24, 25]
+    "new_locations": [24, 25],
+    "board_square": "B-6",
+    "introduction": "There is a certain shaking of heads that happens along with the mention of dragon.s as if the person saying it can't even believe the words coming out of their mouth. Dragons don't exist, they say, but some giant, winged beast has been sighted to the north, so you set off to see if maybe they do.\nYour goal is the Icecrag, the tallest mountain in the Coppernecks. To get there, though, you'll need to head through the northern pass, a narrow corridor between two massive stone cliffs that is known for frequent avalanches and other dangers.\nYou tread carefully, watching high above you for any signs of an ambush. This wariness is what saves you from being crushed by a hail of boulders rumbling down the cliff side. You dive for cover as the rocks hit, then look up to see a group of Inox emerging from a concealed cave to one side of the pass.\nThey intended to kill you with the rocks, but your survival has only motivated them to pursue a more conventional option.",
+    "event_1": {
+      "text": "With the pass blocked by the avalanche, you enter the cave to face your aggressors. Inside you see a network of passages leading deep into the mountain. Perhaps they would be worth exploring once your foes ares dead."
+    },
+    "conclusion": "What were Inox and demons doing together? And so far north? You rifle through their belongings, looking for some indications of their motivations. All you find is some crude scratching referencing a \"voice\"\nYou glance toward the cave. There may be some clues farther down the tunnels.\nTo the north, Icecrag Peak looms large in the distance. (25) Still, you feel something calling you to explore the cave. (24) Not audibly, but there is a subtle and powerful urge.\nYou look down at the Inox's scribblings. A voice - yes, somehow that sounds familiar. You can almost hear it yourself.",
+    "goal": "Kill all enemies",
+    "tiles": ["B4b", "A2b", "K2a", "I2a"]
   },
   {
     "id": 17,
-    "title": "Lost Island"
+    "title": "Lost Island",
+    "board_square": "K-17",
+    "introduction": "There are many undiscovered islands in the Misty Sea. Most are not worth finding, but still, you are confident that you will find vast riches on this particular one.\nThe sea voyage is largely uneventful. You follow the signs until you spy a small mass of land on the horizon.\nIt doesn't get much bigger as you get closer - just a simple piece of earth jutting out og the water, covered in tress and large rocks. On the opposite side of the island, you see the remains of a derelict ship. You drop anchor and paddle to dry land.\nAs your feet hit the sand, an arrow whizzes by your ear and another grazes your leg. Readying your weapons, you see numerous Vermlings scurrying about in the underbrush, preparing to attack your position. And then you hear the roar of a bear.",
+    "event_1": {
+      "text": "Who knew so many of these damned creatures could exist on such a small island? Entering their dwellings onboard the derelict ship, you see more emerge from the shadows. Along with them, however, you see the glinting of gold. This tribe has indeed amassed a great wealth in this ship."
+    },
+    "conclusion": "With the distractions of flashing swords and swiping claws put to rest, you investigate further to find great caches of gold below deck. Who knows what the Vermlings were using the gold for, but you have a good idea what you will use it for.",
+    "rewards": ["25 gold each"],
+    "tiles": ["L1b", "L3a", "B3a", "B4a", "C1b"],
+    "goal": "Kill all enemies"
   },
   {
     "id": 18,
     "title": "Abandoned Sewers",
-    "new_locations": [14, 23, 26, 43]
+    "new_locations": [14, 23, 26, 43],
+    "goal": "Kill all enemies",
+    "board_square": "C-14",
+    "introduction": "From the center of the Silent Bridge, a city guard points you to a grating underneath the west side. \"That's the best way in that hellhole. Good luck.\"\nIt takes a bit of climbing, but you eventually make your way down to the grate, which has been twisted and broken over the many years. You light a torch and step inside, following a narrow path up a slight incline, avoiding the stream of brown liquid running in the opposite direction. After a few minutes, the path opens up into a series of branching passageways.\nYou start to look around, deciding on which way to go, when hissing sounds echo through the stonework toward you. You hold fast to your weapons, straining to see multiple slithering shapes approach.",
+    "event_1": {
+      "text": "Navigating through the passageways, you find yourself in a large, open room with a cistern in the center. Around the cistern stand a group of Vermlings, who look up and snarl in your direction. This must be the cause of the poisoned water."
+    },
+    "conclusion": "The Vermlings lie dead, their dark blood mixing with the pools of water on the floor. Investigating further, you find no poisons of any kind on the corpses. Is it possible these vermin were not the cause and instead were just living here, away from the eyes of the guard? At the back of the room, large cracks are present in the wall, displaying a passage deeper into the depths. (23)\nAnd if you had some way to breathe underwater, (14)(43) you may even be able to enter the cistern and find the source that way. (26)",
+    "tiles": ["H1b", "H3b", "M1a"]
   },
   {
     "id": 19,
     "title": "Forgotten Crypt",
     "requirements": ["The Power of Enhancement"],
     "party_achievements": ["Stonebreaker's Censor"],
-    "new_locations": [27]
+    "new_locations": [27],
+    "board_square": "M-7",
+    "goal": "Protect Hail (a) until she reaches the altar (b)",
+    "introduction": "\"You want to do what now?\" Hail stares at you blankly. \"You've found a rift into the Plane of Elemental Power and you want to close it?\" She sights.\n\"Well, I did agree to help you.\" Hail begins tossing the orb you retrieved up and down in thought. \"Okay, based on your description, it's going to take a little extra work to close a rift of that magnitude. I could do it myself, but it would take a while, and it may get troublesome if we were to be attacked by the other side in the middle of the incantation. It would be much easier to do if I had an elemental censer, which, really, is entirely too convenient, because I've been wanting to get my hands on one for my studies anyway.\n\"I knew a powerful elementalist who owned one many years ago. He's dead now, but I'll take you to his crypt personally. I'd advise against handling the censer on your own.\"\nAfter a day's journey, you find an ancient, overgrown mausoleum resting along the Serpent's Kiss River.\n\"Stonebreaker really was a nice fellow. Getting crushed by massive boulders is just one of the hazards of being an elementalist, though.\" After clearing away the overgrown vines, you head down into the crypt.\n\"Oh great!\" Hail says. \"These blasted cultists are everywhere nowadays. Probably looking for the censer, too. Or they simply don't want you to have it.\"\nYou look at Hail with confusion, and she points to the shadows, where dark figures in black robes emerge.\n\"You shouldn't have come here, ghostface,\" one of them says.\n\"Ugh,\" Hail sighs. \"Dispatch these simpletons quickly. I'm already bored with them.\"",
+    "special_rules": "Add three CURSE (CURSE) cards to each character's attack modifier deck as a scenario effect.\nHail (a), represented by a numbered token, has 4+(2*L) hit points. She is an ally to you and an enemy to all monster types. She acts on initiative 99 each round, performing \"Move 2\" towards the altar (b), opening doors and springing traps if necessary. The scenario is complete when she ends her turn in a hex adjacent to the altar. If Hail is killed, the scenario is lost.",
+    "event_1": {
+      "text": "There is no rest among these cursed undead. As you kick through the door into the next room, you hear more commotion from the entrance. \"There's more of them behind us!\" Hail yells.",
+      "special_rules": "Spawn one normal Cultist for two characters or two normal Cultists for three or four characters at (c)"
+    },
+    "event_2": {
+      "special_rules": "Spawn one normal Living Spirit for two characters or two normal Living Spirit for three or four characters at (d)"
+    },
+    "event_3": {
+      "special_rules": "Spawn one normal Living Bones for two characters or two normal Living Bones for three or four characters at (e)"
+    },
+    "conclusion": "Hail moves forward and grabs hold of the censer. She lifts it aloft and speaks a few words in an unknown language. Fire bursts forth and immolates the remaining undead, reducing them to ash.\nHail breaks the smallest of smiles. \"Well, now that that annoyance has been dealt with, let's get on with the real fun. Show me to this rift of yours.\" (27)",
+    "tiles": ["D2a", "D1a", "C2b", "C1a", "I1b"],
+    "rewards": ["+1 prosperity"]
   },
   {
     "id": 20,
     "title": "Necromancer's Sanctum",
     "requirements": ["The Merchant Flees"],
-    "new_locations": [16, 18, 28]
+    "new_locations": [16, 18, 28],
+    "board_square": "H-13",
+    "goal": "Kill Jekserah",
+    "introduction": "One thing is for certain: you never would have found Jekserah's lair without help. Deep in the Dagger Forest, you would have become hopelessly lost hours ago if not for the detailed directions you carry.\nAfter various twists and turns, you find yourself staring at an ancient mausoleum, hidden in the growth of the forest.A massive tree trunk mostly blocks the entryway.This building must have been built ages ago and was long forgotten by time.\n You squeeze past the tree trunk into the dark halls of the tomb.You light a torch and wait silently, listening for sounds of inhabitants.It is faint, but to your left you hear a shuffling sound. You move closer and open a set of stone doors.Ahead of you, the torchlight catches shadows of the living dead.It looks like Jekserah is hard at work rebuilding her army.",
+    "event_1": {
+      "text": "Jekserah has unfortunately had ample time to reanimate the corpses here, but they are no match for your skills. You knock down one last door to come face - to - face with the necromancer herself.\n\"I don't know how you found me, but it matters little. You have mistakenly assumed that I ran because I was afraid to fight you. I was just holding out some hope that you would come to your senses in time.It is a pity that your minds cannot think beyond what is at the end of your blades.What corpses you have destroyed so far will now be replaced with your own.\"",
+      "boss_special_1": "Jekserah summons two normal Living Bones for two characters, one normal and one elite Living Bones for three characters, or two elite Living Bones for four characters.",
+      "boss_special_2": "This is the same as Boss Special 1, except that Living Corpses are summoned instead of Living Bones."
+    },
+    "conclusion": "Jekserah collapses, the life fleeing her eyes. \"I...\" she whispers at you. \"You have no idea what’ s coming...\" (28)\nWith one more hack of your blade, you separate her head from her body and hastily leave the wretched place full of mangled corpses. You return the head to the Captain of the Guard and are paid handsomely for the bounty on her.\n\"If you are interested, I may have some more work for you,\" he says grimly.\n\"First of all, we’ ve had reports from northern scouts of sightings of a large flying creature. They’ re afraid of dragons. \"He shakes his head in annoyance.\"I’ d like you to head to the northern pass and investigate.\" (16)",
+    "rewards": ["20 gold each", "+2 reputation", "+1 prosperity"],
+    "tiles": ["J1a", "K1a", "C1a", "D1a"]
   },
   {
     "id": 21,
     "title": "Infernal Throne",
     "anti_requirements": ["The Rift Neutralized"],
     "global_achievements": ["The Rift Neutralized"],
-    "conditional_achievements": ["Artifact: Recovered"]
+    "conditional_achievements": ["Artifact: Recovered"],
+    "goal": "Kill the Prime Demon",
+    "board_square": "C-7",
+    "tiles": ["E1a", "J1a", "J2a", "D1a", "D2a"],
+    "introduction": "Before you can even reach for your weapons, the demon senses your intent.\n\"Fools!\" His voice tears at your skull and you reel in pain. \"You dare go against me in my own seat of power? You have made a grave mistake this day!\"\nIn a burst of flame, his massive form vanishes into the darkness.\"To me, my servants! Grind these mortals into the stone.Decorate my palace with their entrails!\"",
+    "event_1": {
+      "text": "You lift back the veil of darkness to reveal the main room of the palace. In the center, you see the huge demon laughing. \"You should have fled my realm while you had the chance, worms. In this place, you cannot possibly harm me.\" He places a giant, clawed hand upon an altar of black glass in front of him. A swirling rift of chromatic energy emerges and pulses, bathing the demon in an aura of protection.",
+      "special_rules": "The Prime Demon and the altar (a) share hit points, initiative, and immunities. The Prime Demon cannot be damaged in any way. Instead, damage must be done to the altar.",
+      "boss_special_1": "The altar jumps to the next hex in the order  of (a), (b), (c), (d), (e), (f) and then back to (a). If the hex is occupied by a figure or other overlay tile, that figure or tile is moved to the nearest unoccupied hex. If the altar moves into an unrevealed room, that room is immediately revealed, opening all doors between it and other revealed rooms.\nThe altar then summons one normal demon for two characters or one elite demon for three or four characters.The type depends on the location: (a) Frost Demon; (b) Wind Demon; (c) Night Demon; (d) Earth Demon; (e) Flame Demon; (f) Sun Demon.\nThe Prime Demon then performs \"Move + 2,Attack - 1.\"",
+      "boss_special_2": "This is the same as Boss Special 1, except that the demon summoned is normal for two or three characters or elite for four characters"
+    },
+    "conclusion": "With one final blow, the rift grows chaotic, spinning wildly and shooting tendrils of energy out at odd angles.A sharp whine emerges from it that increases in intensity until the sound echoes throughout the palace. In a brilliant flash of light, the void collapses in on itself and then explodes outward, sending a shock wave that destroys all demons in its path.\nAs the wave hits the Prime Demon, his aura dissipates and a scream pierces your mind. His legs buckle underneath him and he collapses on the floor, crashing into countless shards of stone.\nAs this happens, the screaming stops and the palace grows oddly quiet.With the threat destroyed, the only sensible thing left to do is loot the place and make your way back to your own plane.",
+    "rewards": ["50 gold each", "+1 prosperity", "Add City Event 78 to the deck"]
   },
   {
     "id": 22,
@@ -262,7 +332,16 @@
     "requirements": ["A Demon's Errand"],
     "alt_requirements": ["Following Clues"],
     "global_achievements": ["Artifact: Recovered"],
-    "new_locations": [31, 35, 36]
+    "new_locations": [31, 35, 36],
+    "board_square": "K-8",
+    "goal": "Destroy all alters (a)",
+    "introduction": "Your road has led you here to the Temple of the Elements in search of an ancient artifact. It apparently holds great power, but anything more than that is very foggy at this point. You enter the decaying stone structure to see for yourself what all the fuss is about.\nAs you step inside, your eye catches signs of recent visitors— a broken twig, footprints in the dust.You approach the main chamber and ready your weapons as a group of hooded figures emerge from the shadows.\n\"You’ re too late, fools. We control this temple now, and all its power serves us.\"",
+    "event_1": {
+      "text": "Moving on from the entrance chamber, you find a large central room with many exits. In the center stands another group of cultists, preparing incantations around a reddish clay vessel, roughly the size of a skull.\n\"The artifact is ours, and it has made our minions more powerful than ever.You cannot hope to stop what is coming.Even if you strike us down, the Gloom will bring forth your end.\" The cultists raise their hands and a barrier surrounds the artifact.",
+      "special_rules": "Each altar (a) has 4+(C*L) hit points. For each altar that isn’ t destroyed, regardless of whether it has been revealed, the maximum hit point and attack values of all demons is increased by 1 and their movement and range values are increased by 0.5(rounded up). Melee attacks do not increase in range."
+    },
+    "conclusion": "With the altars smashed, the demons vanish and the protective barrier around the artifact finally dissipates.You approach the center of the temple and reach out for the vessel but stop short. You feel a powerful darkness emanating from the thing, and behind that, a deep sadness.\nThis artifact has been corrupted, and it seems to almost be cognizant of that fact. All of these feelings flash in your mind as a warning.It could be used for great evil.but would you fight for that evil (35) or against it? (36)\nAfter some effort, you use a thick cloth to get the vessel into your bag. Perhaps it would be best to bring it to an enchanter rather than mess with it yourself.(14) (31)",
+    "tiles": ["B2b", "M1a", "D1a", "D2a", "C1a", "C2b"]
   },
   {
     "id": 23,
