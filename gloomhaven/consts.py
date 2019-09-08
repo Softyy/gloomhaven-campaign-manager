@@ -1,7 +1,9 @@
 import os
 import json
+
 from .models.scenario import Scenario
 from .models.achievement import GlobalAchievement
+from .models.treasure import Treasure
 
 
 CYTO_GRAPH_ID = 'scenario-paths'
@@ -119,3 +121,8 @@ with open(os.path.join(os.getcwd(), "gloomhaven",
     json_array = json.load(data_file)
     GLOBAL_ACHIEVEMENTS = [GlobalAchievement(
         **values) for values in json_array]
+
+with open(os.path.join(os.getcwd(), "gloomhaven",
+                       "data", "treasures.json"), encoding='utf-8') as data_file:
+    json_array = json.load(data_file)
+    TREASURES = [Treasure(**values) for values in json_array]
