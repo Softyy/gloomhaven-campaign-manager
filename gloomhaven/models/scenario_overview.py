@@ -9,7 +9,7 @@ class ScenarioOverview():
         self.tiles = scenario.tiles
 
     def to_html(self):
-        return [Img(src=f'./assets/scenario_layouts/{self.id}.bmp')]
+        return [Img(src=f'./assets/scenario_layouts/{self.id}.png')]
         # return [self.map_str_to_html(tile) for tile in self.tiles]
 
     def map_str_to_html(self, tile_id: str):

@@ -78,14 +78,18 @@ CYTO_STYLESHEET = [
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': '#007bff'
+            'color': '#007bff',
+            'background-fit': 'cover',
+            'background-image': 'data(image_url)'
         }
     },
     {
         'selector': '.completed',
         'style': {
             'font-family': 'Pirata One',
-            'background-color': '#28a745',
+            'color': '#28a745',
+            'background-fit': 'cover',
+            'background-image': 'data(image_url)'
         }
     },
     {
@@ -93,7 +97,9 @@ CYTO_STYLESHEET = [
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': '#dc3545',
+            'color': '#dc3545',
+            'background-fit': 'cover',
+            'background-image': 'data(image_url)'
         }
     },
     {
@@ -101,7 +107,9 @@ CYTO_STYLESHEET = [
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'background-color': '#ffc107',
+            'color': '#ffc107',
+            'background-fit': 'cover',
+            'background-image': 'data(image_url)'
         }
     },
     # This last entry needs to be here for the logic on the hover to work.

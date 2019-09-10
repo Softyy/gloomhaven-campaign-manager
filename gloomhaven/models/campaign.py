@@ -11,14 +11,16 @@ from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
 
 class Campaign():
 
-    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], failed_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], creation_date=dt.today().strftime("%Y-%m-%d")):
+    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], party_reputation: int = 0, city_deck=list(range(1, 33)), road_deck: [int] = list(range(1, 33)), creation_date=dt.today().strftime("%Y-%m-%d")):
         self.available_scenarios = available_scenarios
         self.completed_scenarios = completed_scenarios
         self.attempted_scenarios = attempted_scenarios
-        self.failed_scenarios = failed_scenarios
         self.global_achievements = global_achievements
         self.party_achievements = party_achievements
         self.creation_date = creation_date
+        self.party_reputation = party_reputation
+        self.city_deck = city_deck
+        self.road_deck = road_deck
 
     @staticmethod
     def get_scenario(id: int) -> Scenario:
@@ -67,7 +69,6 @@ class Campaign():
 
     def fail_scenario(self, scenario_id: int):
         self.attempted_scenarios.append(scenario_id)
-        self.failed_scenarios.append(scenario_id)
 
     def scenario_requirements_met(self, scenario_id: int) -> bool:
         scenario: Scenario = self.get_scenario(scenario_id)
@@ -98,9 +99,18 @@ class Campaign():
 
     def create_scenario_cyto_node(self, scenario: Scenario, className='available'):
         return {
-            'data': {'id': scenario.id, 'label': scenario.title, 'parent': scenario.scenario_type, 'type': className},
+            'data': {'id': scenario.id, 'label': scenario.title, 'parent': scenario.scenario_type, 'type': className,
+                     'image_url': self.get_location_image_url(scenario.id)},
             'classes': className
         }
+
+    @staticmethod
+    def get_location_image_url(scenario_id):
+        if scenario_id in (11, 12):
+            scenario_id = '11-12'
+        elif scenario_id in (35, 36):
+            scenario_id = '35-36'
+        return f'/assets/world-map/{scenario_id}.png'
 
     def create_cyto_edge(self, p1: int, p2: int):
         return {'data': {'source': p1, 'target': p2}, 'style': {
