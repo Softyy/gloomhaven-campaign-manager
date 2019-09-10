@@ -63,6 +63,13 @@ ROAD_QUEST_NODE = {
     'data': {'id': 'road', 'label': 'Road Events'}
 }
 
+BASE_ATTACK_MODIFIER_DECK = ['0']*6 + ['1'] * 5 + \
+    ['-1'] * 5 + ['-2']*1 + ['2']*1 + ['2x']*1 + ['X']*1
+
+ATTACK_MODIFIER_ONE_TIME_USE_CARDS = [
+    'CURSE'
+]
+
 SCENARIO_NODE_PARENTS = [
     MAIN_QUEST_NODE,
     # PERSONAL_QUEST_NODE,
@@ -78,7 +85,7 @@ CYTO_STYLESHEET = [
         'style': {
             'content': 'data(label)',
             'font-family': 'Pirata One',
-            'color': '#007bff',
+            'color': '#000000',
             'background-fit': 'cover',
             'background-image': 'data(image_url)'
         }
