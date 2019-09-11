@@ -1,10 +1,11 @@
 import dash_cytoscape as cyto
 import dash_html_components as html
 import dash_core_components as dcc
+import dash_daq as daq
 import dash_bootstrap_components as dbc
 
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID, CYTO_STYLESHEET, OPEN_CAMPAIGN_MODAL_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, SCENARIOS, SCENARIO_NODE_PARENTS, STORE_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID, CYTO_STYLESHEET, OPEN_CAMPAIGN_MODAL_ID, MAP_TOGGLE_ID
 
 from .banners import render as banners
 from .scenario import render as scenario_modal
@@ -18,6 +19,9 @@ def render():
         scenario_modal(),
         campaign_modal(),
         dbc.NavbarSimple([
+            daq.BooleanSwitch(id=MAP_TOGGLE_ID,
+                              children=html.I(
+                                  className="fas fa-map-marked"), className="m-1"),
             dbc.Button(id=OPEN_CAMPAIGN_MODAL_ID,
                        children=html.I(
                            className="fas fa-book-open"), className="m-1", color="info"),

@@ -67,6 +67,8 @@ def update_local_storage_and_handle_modal(node, success_click_ts, progress_click
         return campaign.to_dict(), dict_to_inline_href(campaign.to_dict()), no_update, no_update, no_update, no_update, no_update
     # a node was clicked.
     elif first_arg_is_greatest(node_ts, success_click_ts, fail_click_ts, erase_click_ts, close_click_ts, progress_click_ts):
+        if node_data['type'] == 'background':
+            raise PreventUpdate
         scenario: Scenario = Campaign.get_scenario(int(node_data["id"]))
         return no_update, no_update, True, f'{scenario.id} - {scenario.title} ({scenario.board_square})', Campaign.create_modal_scenario_text_body(scenario.id, show_conclusion=node_data['type'] == 'completed', show_requirements_not_met=node_data['type'] == 'blocked'), no_update, no_update
     # close button was clicked.
@@ -83,7 +85,7 @@ def update_local_storage_and_handle_modal(node, success_click_ts, progress_click
                Input(PROGRESS_SCENARIO_ID, "n_clicks_timestamp")],
               [State(PROGRESS_SCENARIO_ID, "children")])
 def hide_buttons_for_completed_scenario(node, success_click_ts, progress_click_ts, progress_button_text):
-    if node is None:
+    if node is None or node['data']['type'] == 'background':
         raise PreventUpdate
 
     node_data = node['data'] if node else None

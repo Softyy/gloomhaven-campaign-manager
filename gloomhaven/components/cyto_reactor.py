@@ -6,27 +6,28 @@ from ..models.campaign import Campaign
 
 from .. import app
 
-from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID
+from ..consts import CYTO_GRAPH_ID, DUMMY_ID, STORE_ID, BANNERS_ID, CLEAR_DATA_ID, DOWNLOAD_DATA_ID, MAP_TOGGLE_ID
 
 from .downloader import dict_to_inline_href
 
 
 @app.callback([Output(CYTO_GRAPH_ID, 'elements'), Output(BANNERS_ID, 'children')],
-              [Input(STORE_ID, 'modified_timestamp')],
+              [Input(STORE_ID, 'modified_timestamp'),
+               Input(MAP_TOGGLE_ID, 'on')],
               [State(STORE_ID, 'data')])
-def update_cyto_graph(ts, store_data):
+def update_cyto_graph(ts, map_mode, store_data):
     if ts is None:
         raise PreventUpdate
     store_data = store_data or {}
     campaign = Campaign(**store_data)
-    return campaign.to_cyto_graph(), campaign.create_global_banner_imgs()
+    return campaign.to_cyto_graph(map_mode), campaign.create_global_banner_imgs()
 
 
 @app.callback(Output(CYTO_GRAPH_ID, 'stylesheet'),
               [Input(CYTO_GRAPH_ID, 'mouseoverNodeData')],
               [State(CYTO_GRAPH_ID, 'stylesheet')])
 def show_past_scenario_title(node_data, stylesheet):
-    if node_data is None or node_data is {} or node_data['type'] == 'available' or node_data['type'] == 'attempted':
+    if node_data is None or node_data is {} or node_data['type'] in ('available', 'attempted'):
         raise PreventUpdate
     last_hovered_element_style = stylesheet.pop(-1)
 

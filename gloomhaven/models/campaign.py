@@ -6,7 +6,7 @@ from ..models.achievement import GlobalAchievement
 from ..models.scenario_overview import ScenarioOverview
 from ..models.scenario_event import ScenarioEvent
 
-from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS
+from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS, MAP_NODE
 
 
 class Campaign():
@@ -94,8 +94,8 @@ class Campaign():
     def to_dict(self):
         return self.__dict__
 
-    def to_cyto_graph(self):
-        return self.create_cyto_elements_for_scenarios()
+    def to_cyto_graph(self, map_mode_flag=False):
+        return self.create_cyto_elements_for_scenarios(map_mode_flag=map_mode_flag)
 
     def create_scenario_cyto_node(self, scenario: Scenario, className='available'):
         return {
@@ -117,7 +117,7 @@ class Campaign():
             'mid-source-arrow-fill': 'filled', 'mid-target-arrow-shape': 'vee'},
             'selectable': False}
 
-    def create_cyto_elements_for_scenarios(self):
+    def create_cyto_elements_for_scenarios(self, map_mode_flag=False):
         possible_s = [
             s for s in self.available_scenarios if self.scenario_requirements_met(s)]
         impossible_s = [
@@ -138,14 +138,20 @@ class Campaign():
         s_done = [self.get_scenario(s) for s in self.completed_scenarios]
         nodes_done = [self.create_scenario_cyto_node(
             s, 'completed') for s in s_done]
-        edges_done = [self.create_cyto_edge(s.id, n)
-                      for s in s_done for n in s.new_locations]
+        edges_done = []
 
         s_blocked = [self.get_scenario(s) for s in impossible_s]
         nodes_blocked = [self.create_scenario_cyto_node(
             s, 'blocked') for s in s_blocked]
 
-        return nodes_todo + nodes_tried + nodes_done + edges_done + nodes_blocked
+        parent_nodes = []
+
+        if map_mode_flag:
+            parent_nodes = [MAP_NODE]
+        else:
+            edges_done = [self.create_cyto_edge(s.id, n)
+                          for s in s_done for n in s.new_locations]
+        return nodes_todo + nodes_tried + nodes_done + edges_done + nodes_blocked + parent_nodes
 
     def create_global_banner_imgs(self):
         global_achievements = [
@@ -189,25 +195,18 @@ class Campaign():
         scenario_overview = ScenarioOverview(scenario)
 
         if show_requirements_not_met:
-            requirements_section = [
-                H6("Requirements", style={"border-bottom": "1px solid black"})]
-            requirements_section += scenario.requirements_to_html()
+            requirements_section = cls.create_html_section(
+                "Requirements", html_body=scenario.requirements_to_html())
             return requirements_section
 
-        introduction_section = [
-            H6("Introduction", style={"border-bottom": "1px solid black"})]
-        introduction_section += cls.text_to_html(scenario.introduction)
+        introduction_section = cls.create_html_section(
+            "Introduction", scenario.introduction)
 
-        special_rules_section = []
+        special_rules_section = cls.create_html_section(
+            "Special Rules", scenario.special_rules)
 
-        if scenario.special_rules != "":
-            special_rules_section += [H6("Special Rules",
-                                         style={"border-bottom": "1px solid black"})]
-            special_rules_section += cls.text_to_html(scenario.special_rules)
-
-        goal_section = [
-            H6("Goal", style={"border-bottom": "1px solid black"})]
-        goal_section += cls.text_to_html(scenario.goal)
+        goal_section = cls.create_html_section(
+            "Goal", scenario.goal)
 
         map_section = scenario_overview.to_html()
 
@@ -225,9 +224,8 @@ class Campaign():
             midgame_section = cls.event_to_html(
                 midgame_section, 3, scenario.event_3)
 
-        conclusion_section = [
-            H6("Conclusion", style={"border-bottom": "1px solid black"})]
-        conclusion_section += cls.text_to_html(scenario.conclusion)
+        conclusion_section = cls.create_html_section(
+            "Conclusion", scenario.conclusion)
 
         return introduction_section + special_rules_section + map_section + goal_section + midgame_section + (conclusion_section if show_conclusion else [])
 
@@ -244,21 +242,19 @@ class Campaign():
             className="d-flex justify-content-center align-items-center")]
         midgame_section += cls.text_to_html(event.text)
 
-        if event.special_rules != "":
-            midgame_section += [H6("Special Rules",
-                                   style={"border-bottom": "1px solid black"})]
-            midgame_section += cls.text_to_html(
-                event.special_rules)
-
-        if event.boss_special_1 != "":
-            midgame_section += [H6("Boss Special 1",
-                                   style={"border-bottom": "1px solid black"})]
-            midgame_section += cls.text_to_html(
-                event.boss_special_1)
-
-        if event.boss_special_2 != "":
-            midgame_section += [H6("Boss Special 2",
-                                   style={"border-bottom": "1px solid black"})]
-            midgame_section += cls.text_to_html(
-                event.boss_special_2)
+        midgame_section += cls.create_html_section(
+            'Special Rules', event.special_rules)
+        midgame_section += cls.create_html_section(
+            'Boss Special 1', event.boss_special_1)
+        midgame_section += cls.create_html_section(
+            'Boss Special 2', event.boss_special_2)
         return midgame_section
+
+    @classmethod
+    def create_html_section(cls, title="Section Title", text="", html_body=None):
+        html_to_add = []
+        if text != "" or html_body:
+            html_to_add += [H6(title,
+                               style={"border-bottom": "1px solid black"})]
+            html_to_add += html_body if html_body else cls.text_to_html(text)
+        return html_to_add

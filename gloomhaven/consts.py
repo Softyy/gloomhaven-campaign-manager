@@ -13,6 +13,7 @@ BANNERS_ID = 'banners'
 CLEAR_DATA_ID = 'clear-data'
 DOWNLOAD_DATA_ID = 'download-data'
 UNDO_STEP_ID = 'undo'
+MAP_TOGGLE_ID = 'map-mode'
 
 OPEN_MODAL_ID = 'open-scenario-modal'
 CLOSE_MODAL_ID = 'close-scenario-modal'
@@ -38,6 +39,11 @@ DEFAULT_PROGRESS_TEXT = 'Open door %s'
 
 PROSPERITY_ID = 'prosperity-counter'
 PARTY_ACHIEVEMENT_LIST_ID = 'party-achievements'
+
+MAP_NODE = {
+    'data': {'id': 'main', 'image_url': '/assets/world-map/gloomhaven-map.png', 'type': 'background'},
+    'classes': 'map'
+}
 
 MAIN_QUEST_NODE = {
     'data': {'id': 'main', 'label': 'Main Quests'}
@@ -88,6 +94,15 @@ CYTO_STYLESHEET = [
             'color': '#000000',
             'background-fit': 'cover',
             'background-image': 'data(image_url)'
+        }
+    },
+    {
+        'selector': '.map',
+        'style': {
+            'background-fit': 'cover',
+            'background-image': 'data(image_url)',
+            'width': 100,
+            'height': 100
         }
     },
     {
