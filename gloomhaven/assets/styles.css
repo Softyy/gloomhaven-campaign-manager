@@ -39,9 +39,9 @@ h6,
   width: 100%;
 }
 
-#campaign-modal .modal-content {
+#event-modal .modal-content {
   font-family: "Nyala";
-  background: url("background.jpg") no-repeat center;
+  background: url("road.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

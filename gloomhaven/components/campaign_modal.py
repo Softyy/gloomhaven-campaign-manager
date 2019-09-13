@@ -7,7 +7,7 @@ from ..models.scenario import Scenario
 
 from .. import app
 
-from ..consts import CAMPAIGN_MODAL_ID, OPEN_CAMPAIGN_MODAL_ID, CLOSE_CAMPAIGN_MODAL_ID, PARTY_ACHIEVEMENT_LIST_ID, STORE_ID
+from ..consts import CAMPAIGN_MODAL_ID, OPEN_CAMPAIGN_MODAL_ID, CLOSE_CAMPAIGN_MODAL_ID, PARTY_ACHIEVEMENT_LIST_ID, STORE_ID, EVENT_MODAL_ID, OPEN_CITY_EVENT_MODAL, OPEN_ROAD_EVENT_MODAL
 
 
 @app.callback(
@@ -17,6 +17,18 @@ from ..consts import CAMPAIGN_MODAL_ID, OPEN_CAMPAIGN_MODAL_ID, CLOSE_CAMPAIGN_M
     [State(CAMPAIGN_MODAL_ID, "is_open")],
 )
 def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+
+@app.callback(
+    Output(EVENT_MODAL_ID, "is_open"),
+    [Input(OPEN_CITY_EVENT_MODAL, "n_clicks"),
+     Input(OPEN_ROAD_EVENT_MODAL, "n_clicks")],
+    [State(EVENT_MODAL_ID, "is_open")],
+)
+def toggle_event_modal(n1, n2, is_open):
     if n1 or n2:
         return not is_open
     return is_open

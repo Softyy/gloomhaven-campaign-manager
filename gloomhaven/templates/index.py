@@ -11,6 +11,7 @@ from .banners import render as banners
 from .scenario import render as scenario_modal
 from .toasts import render as toasts
 from .campaign_stats import render as campaign_modal
+from .event_modal import render as event_modal
 
 
 def render():
@@ -18,10 +19,12 @@ def render():
         dcc.Store(id=STORE_ID, storage_type='local'),
         scenario_modal(),
         campaign_modal(),
+        event_modal(),
         dbc.NavbarSimple([
             daq.BooleanSwitch(id=MAP_TOGGLE_ID,
                               children=html.I(
-                                  className="fas fa-map-marked"), className="m-1"),
+                                  className="fas fa-map-marked"),
+                              className="m-1"),
             dbc.Button(id=OPEN_CAMPAIGN_MODAL_ID,
                        children=html.I(
                            className="fas fa-book-open"), className="m-1", color="info"),

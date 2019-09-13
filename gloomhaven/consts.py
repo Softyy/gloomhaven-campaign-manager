@@ -35,6 +35,14 @@ FAIL_SCENARIO_ID = 'scenario-failed'
 TOAST_ACHIEVEMENT_ID = 'toast-achievements'
 TOAST_NEW_LOCATION_ID = 'toast-new-locations'
 
+EVENT_MODAL_ID = 'event-modal'
+EVENT_MODAL_BODY_ID = 'event-modal-body'
+EVENT_MODAL_BUTTON_A_ID = 'option-A'
+EVENT_MODAL_BUTTON_B_ID = 'option-B'
+
+OPEN_CITY_EVENT_MODAL = 'city-event-trigger'
+OPEN_ROAD_EVENT_MODAL = 'road-event-trigger'
+
 DEFAULT_PROGRESS_TEXT = 'Open door %s'
 
 PROSPERITY_ID = 'prosperity-counter'
