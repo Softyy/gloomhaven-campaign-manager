@@ -34,7 +34,8 @@ def render():
             dbc.Button(id=CLEAR_DATA_ID, children=[html.I(
                 className="fas fa-trash-alt")], color="danger", className="m-1"),
         ],
-            brand="Gloomhaven Campaign Manager",
+            expand=True,
+            brand="GCM",
         ),
         banners(),
 

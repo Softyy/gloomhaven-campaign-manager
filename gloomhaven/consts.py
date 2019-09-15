@@ -4,6 +4,7 @@ import json
 from .models.scenario import Scenario
 from .models.achievement import GlobalAchievement
 from .models.treasure import Treasure
+from .models.travel_event import TravelEvent
 
 
 CYTO_GRAPH_ID = 'scenario-paths'
@@ -167,3 +168,13 @@ with open(os.path.join(os.getcwd(), "gloomhaven",
                        "data", "treasures.json"), encoding='utf-8') as data_file:
     json_array = json.load(data_file)
     TREASURES = [Treasure(**values) for values in json_array]
+
+with open(os.path.join(os.getcwd(), "gloomhaven",
+                       "data", "eventCards", "city.json"), encoding='utf-8') as data_file:
+    json_array = json.load(data_file)
+    CITY_EVENTS = [TravelEvent(**values) for values in json_array]
+
+with open(os.path.join(os.getcwd(), "gloomhaven",
+                       "data", "eventCards", "road.json"), encoding='utf-8') as data_file:
+    json_array = json.load(data_file)
+    ROAD_EVENTS = [TravelEvent(**values) for values in json_array]

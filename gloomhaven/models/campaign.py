@@ -1,3 +1,4 @@
+from random import randint
 from datetime import datetime as dt
 from dash_html_components import Img, P, H6, Div
 
@@ -5,13 +6,14 @@ from ..models.scenario import Scenario
 from ..models.achievement import GlobalAchievement
 from ..models.scenario_overview import ScenarioOverview
 from ..models.scenario_event import ScenarioEvent
+from ..models.travel_event import TravelEvent
 
-from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS, MAP_NODE
+from ..consts import SCENARIOS, GLOBAL_ACHIEVEMENTS, MAP_NODE, CITY_EVENTS, ROAD_EVENTS
 
 
 class Campaign():
 
-    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], party_reputation: int = 0, city_deck=list(range(1, 33)), road_deck: [int] = list(range(1, 33)), creation_date=dt.today().strftime("%Y-%m-%d")):
+    def __init__(self, available_scenarios: [int] = [1], completed_scenarios: [int] = [], attempted_scenarios: [int] = [], global_achievements: [str] = ["City Rule: Militaristic"], party_achievements: [str] = [], party_reputation: int = 0, city_deck=[x.id for x in CITY_EVENTS], road_deck: [int] = [x.id for x in ROAD_EVENTS], creation_date=dt.today().strftime("%Y-%m-%d")):
         self.available_scenarios = available_scenarios
         self.completed_scenarios = completed_scenarios
         self.attempted_scenarios = attempted_scenarios
@@ -31,6 +33,16 @@ class Campaign():
     def get_global_achievement(title: str) -> GlobalAchievement:
         return next(
             s for s in GLOBAL_ACHIEVEMENTS if s.title == title)
+
+    @staticmethod
+    def get_city_event(id: int) -> TravelEvent:
+        return next(
+            s for s in CITY_EVENTS if s.id == id)
+
+    @staticmethod
+    def get_road_event(id: int) -> TravelEvent:
+        return next(
+            s for s in ROAD_EVENTS if s.id == id)
 
     def complete_scenario(self, scenario_id: int):
 
@@ -258,3 +270,23 @@ class Campaign():
                                style={"border-bottom": "1px solid black"})]
             html_to_add += html_body if html_body else cls.text_to_html(text)
         return html_to_add
+
+    def city_road_event_body_to_html(self, city_event=True):
+        if city_event:
+            random_id = randint(0, len(self.city_deck)-1)
+            try:
+                event_id = self.city_deck[random_id]
+            except IndexError:
+                print(self.city_deck)
+                print(f'city event:{random_id} wasn\'t found, weird')
+                return ["Error"]*3
+            event = self.get_city_event(event_id)
+        else:
+            random_id = randint(0, len(self.road_deck)-1)
+            try:
+                event_id = self.road_deck[random_id]
+            except IndexError:
+                print(f'road event:{random_id} wasn\'t found, weird')
+                return ["Error"]*3
+            event = self.get_road_event(event_id)
+        return self.text_to_html(event.text), event.option_1, event.option_2

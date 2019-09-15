@@ -22,7 +22,7 @@
     "pay_outcome_1": "You hand over the gold and take hold of the piece of garbage.Amidst troubling brown smears you see lot of meaningless scratches likely made by rats and bugs.Oh well.Sometimes the long shot doesn't pay off",
     "pay_outcome_1_cycle": true,
     "pay_outcome_1_rewards": ["No effect"],
-    "default_outcome_2": "You laugh and gesture the Vermling away. You can recognize a low - life swindler when you see one.And that piece of garbage was jus...foul.",
+    "default_outcome_2": "You laugh and gesture the Vermling away. You can recognize a low - life swindler when you see one.And that piece of garbage was just...foul.",
     "default_outcome_2_rewards": ["No effect"],
     "default_outcome_2_cycle": true
   },
