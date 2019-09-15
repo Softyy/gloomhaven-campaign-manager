@@ -1,12 +1,59 @@
 [{
-  "id": 1,
-  "text": "\"Heading out a little late, aren 't your The guard at the wall looks at you passively.You grunt in response and head through the opened gate.\n\"Nobody's gonna go looking for your corpse if you don 't return!\" the guard shouts at your back.\nYou ended up embarking out on the road much later than you had hoped— events in town saw to that but as dusk settles on the horizon you feel confident that you are up to any threat you might face.\n And then begins the howling or wolves vicious, Foul beasts - —and judging from their sounds, they seem to begetting closer.",
-  "option_1": "Run from the howling to safety.",
-  "option_2": "Let the wolves come.",
-  "default_outcome_1": "You pick up and run as fast as you can through the underbrush and away from the ominous sounds, They seem to be receding as you stumble headlong into some sort or thicket filled with sticky spines.\nYou pull yourself out, but not before your skin is pierced in numerous places and becomes inflamed Best to avoid this plant in the future.",
-  "default_outcome_1_rewards": ["All start scenario with POISON (POISON)"],
-  "default_outcome_1_cycle": true,
-  "default_outcome_2": "Confident that the wolves pose no significant threat, you stand your ground and prepare for battle.The pack comes ragged and hungry, slowly emerging from the dark—and surrounds your party.\nThere are more of them than you expected but not enough to take you down.You suffer a bite or two, but are able to fight them on ",
-  "default_outcome_2_rewards": ["All start scenario with 3 damage."],
-  "default_outcome_2_cycle": true
-}]
+    "id": 1,
+    "text": "\"Heading out a little late, aren't your The guard at the wall looks at you passively.You grunt in response and head through the opened gate.\n\"Nobody's gonna go looking for your corpse if you don 't return!\" the guard shouts at your back.\nYou ended up embarking out on the road much later than you had hoped— events in town saw to that but as dusk settles on the horizon you feel confident that you are up to any threat you might face.\n And then begins the howling or wolves vicious, Foul beasts - —and judging from their sounds, they seem to begetting closer.",
+    "option_1": "Run from the howling to safety.",
+    "option_2": "Let the wolves come.",
+    "default_outcome_1": "You pick up and run as fast as you can through the underbrush and away from the ominous sounds, They seem to be receding as you stumble headlong into some sort or thicket filled with sticky spines.\nYou pull yourself out, but not before your skin is pierced in numerous places and becomes inflamed Best to avoid this plant in the future.",
+    "default_outcome_1_rewards": ["All start scenario with POISON (POISON)"],
+    "default_outcome_1_cycle": true,
+    "default_outcome_2": "Confident that the wolves pose no significant threat, you stand your ground and prepare for battle.The pack comes ragged and hungry, slowly emerging from the dark—and surrounds your party.\nThere are more of them than you expected but not enough to take you down.You suffer a bite or two, but are able to fight them on ",
+    "default_outcome_2_rewards": ["All start scenario with 3 damage."],
+    "default_outcome_2_cycle": true
+  },
+  {
+    "id": 2,
+    "text": "You are reeling tad hungry as you walk down the road.You are considering stopping for a meal when you come across thicket or bushes covered in green berries.\nThe berries look delicious, but you hesitate.They could be poisonous.",
+    "option_1": "Eat the berries.",
+    "option_2": "Pass by the berries and just eat your normal rations.",
+    "default_outcome_1": "You shrug and grab a handful or berries to stuff in your mouth They are incredibly sweet and just the right amount of tart.You couldn't feel better about your decision.",
+    "default_outcome_1_rewards": ["All start scenario with BLESS (BLESS)"],
+    "default_outcome_1_cycle": true,
+    "default_outcome_2": "Not wanting to regret making a stupid decision, you refrain from eating the berries and continue on down the road.",
+    "default_outcome_2_cycle": true
+  },
+  {
+    "id": 3,
+    "text": "You are reeling tad hungry as you walk down the road.You are considering stopping for a meal when you come across thicket or bushes covered in green berries.\nThe berries look delicious, but you hesitate. They could be poisonous.",
+    "option_1": "Eat the berries.",
+    "option_2": "Pass by the berries and just eat your normal rations.",
+    "default_outcome_1": "You shrug and grab a handful of berries to stuff in your mouth.They are incredibly sweet and just the right amount or tart. You couldn't feel better about your decision. That is, until you start vomiting. Your stomach is incredibly unhappy with you, and the situation doesn't improve much by the time you arrive at your destination.",
+    "default_outcome_1_rewards": ["All start scenario with POISON (POISON)"],
+    "default_outcome_1_cycle": true,
+    "default_outcome_2": "Not wanting to regret making a stupid decision, you refrain from eating the berries and continue on down the road.",
+    "default_outcome_2_cycle": true
+  },
+  {
+    "id": 4,
+    "text": "You see fresh wagon tracks in the dirt as you walk along the road. You continue Forward and begin to pick out a number of distinct tracks.They must be from a large caravan.\nSure enough, as you crest a hill, you see a group of four wagons headed down the road in the same direction as you.You count perhaps three or four guards among them.",
+    "option_1": "Approach the caravan and offer to travel with them until your paths diverge.",
+    "option_2": "Attack the caravan",
+    "default_outcome_1": "The merchants in the caravan seem grateful, though the guards eye you skeptically. After traveling for half a day without event, you head off down a side road and wave good - bye. The merchants express their appreciation with a bit of coin.",
+    "default_outcome_1_rewards": ["Gain 2 gold each.", "Reputation > 9: Gain 1 additional gold each"],
+    "default_outcome_1_cycle": false,
+    "default_outcome_2": "With so few guards protecting it, the caravan makes an ideal mark.You charge down the hill.weapons at the ready.The merchants scatter, and the guards are easily dispatched,leaving you with a nice stash ot valuables.",
+    "default_outcome_2_rewards": ["Gain 10 gold each.", "Lose 2 reputation"],
+    "default_outcome_2_cycle": false
+  },
+  {
+    "id": 5,
+    "text": "You are traveling through a small wooded area when you round a bend and 6n d a group of Inox warriors fighting a band of armored humans.\nWith all the commotion it's hard to discern more details, but the humans look like guards from Gloomhaven.You are not sure why they would be out here fighting the Inox, though ",
+    "option_1": "Help the Inox fight off the humans",
+    "option_2": "Help the humans fight off the Inox",
+    "default_outcome_1": "Fearing the battle could go either way, you charge into the fray laying low the human attackers.When the dust settles, the Inox offer you a skeptical thanks.\n\"Humans think they own all this land,\" one of the Inox says as he spits on the ground.\"We thank you for helping us with the nuisance. Allow us to bless you with a gift.\"",
+    "default_outcome_1_rewards": ["Gain 1 collective \"Necklace of Teeth\" (Item 106)"],
+    "default_outcome_1_cycle": false,
+    "default_outcome_2": "With your arrival, the Inox retreat back into the woods one or them casting hexes as he flees.\n\"Blast it all,\" one or the guards says. \"Patrol duty is the absolute worst.No matter what we tell those savages, they're convinced we 're going to take over their forest. Anyway, thanks for your help. / thought we were done",
+    "default_outcome_2_rewards": ["All start scenario with CURSE (CURSE)", "Gain 1 reputation"],
+    "default_outcome_2_cycle": false
+  }
+]
